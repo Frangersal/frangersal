@@ -9,125 +9,22 @@ Global recomendado
     font-size: 13px;
 }
 :root {
-    --primario: #064428;
-    --secundario: #ECEDE7;
-    --terciario: #00039e;
-  }
-body{
-    background-color: slategray; 
+    --verde: #064428;
+    --blanco: #ECEDE7;
+    --negro: #000;
+    --test1: #00039e;
+    --test2: #e2c418;
+    --test3: #a80000;
 }
-main > section{
-    height: 580px;
+.bg-verde{
+    background-color: var(--verde);
+    color: var(--blanco);
 }
-.header_fgsm{
-
+.bg-blanco{
+    background-color: var(--blanco);
+    color: var(--negro);
 }
-.main_fgsm{
-
-}
-.main-section{
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-
-}
-.titulo{
-    width: 100%;
-    height: 4rem;
-    background-color: #00039e00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-}
-
-.perfil{
-    background-color: var(--primario);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-
-
-} 
-.picture-img{
-    padding: auto;
-    border-radius: 10%;
-    max-height: 20rem;
-
-} 
-.perfil-texto{
-    background-color: #042c1aa9;
-    color: #ECEDE7;
-    border-radius: 1rem;
-    font-size: 1.5rem;
-    margin: 1rem;
-    height: 5rem;
-    width: 100%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.proyectos{
-    background-color: var(--secundario);
-    display: flex;
-    flex-wrap: wrap;
-
-}
-.box-proyectos{
-    display: flex;
-    flex-direction: row;
-    overflow: auto;
-    
-}
-.proyecto{
-    background-color: #064428;
-    padding: 2rem;
-    margin: 2rem;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.seccion{
 
 }
 
-.tecnologias{
-    background-color: var(--primario);
-    display: flex;
-    flex-wrap: wrap;
-
-}
-.box-tecnologias{
-    display: flex;
-    flex-direction: row;
-    overflow: auto;
-    
-}
-.tecnologia{
-    background-color: var(--secundario);
-    padding: 2rem;
-    margin: 2rem;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-.tec-img{
-    height: 200px;
-}
-.footer_fgsm{
-
-}
-
-/* Tablet */
-@media(max-width:600px){
-    .perfil-texto{ 
-        font-size: 1rem;
-    }
-}
