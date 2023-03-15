@@ -33,6 +33,12 @@ main > section{
 }
 .titulo{
     width: 100%;
+    height: 4rem;
+    background-color: #00039e00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
 }
 
 .perfil{
@@ -65,13 +71,56 @@ main > section{
 }
 .proyectos{
     background-color: var(--secundario);
+    display: flex;
+    flex-wrap: wrap;
 
 }
+.box-proyectos{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    
+}
+.proyecto{
+    background-color: #064428;
+    padding: 2rem;
+    margin: 2rem;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
 .tecnologias{
-    background-color: var(--terciario);
+    background-color: var(--primario);
+    display: flex;
+    flex-wrap: wrap;
 
 }
+.box-tecnologias{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    
+}
+.tecnologia{
+    background-color: var(--secundario);
+    padding: 2rem;
+    margin: 2rem;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
+}
+.tec-img{
+    height: 200px;
+}
 .footer_fgsm{
 
 }
