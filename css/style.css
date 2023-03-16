@@ -5,7 +5,7 @@ Global recomendado
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
     font-size: 13px;
 }
 :root {
@@ -16,6 +16,8 @@ Global recomendado
     --test2: #e2c418;
     --test3: #a80000;
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 .bg-verde{
     background-color: var(--verde);
     color: var(--blanco);
@@ -24,7 +26,50 @@ Global recomendado
     background-color: var(--blanco);
     color: var(--negro);
 }
-.seccion{
+.titulos{
+    margin: 5rem auto 0rem auto;
+    z-index: 500;
+}
+.img-perfil{
+    height: 20rem;
+    border-radius: 30%;
+}
+.nombre{
+    width: 70%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5rem;
+}
+.puesto{
+    width: 70%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+}
+.perfil-pro{
+    width: 70%;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+.seccion-f{
+    font-family: 'Roboto Mono', monospace;
+    min-height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px; /* ajusta el valor según prefieras */
+
 
 }
+.parallax {
+    /* The image used */
+    background-image: url("./../src/img/lap20.png");
 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
