@@ -93,14 +93,13 @@ Global recomendado
   }
   .card-proyect{
     font-size: 0.5rem;
-    background-color: #00039e;
+    background-color: #00039e79;
     border-radius: 5rem;
     margin: .5rem;
     height: 400px;
     width: 400px;
     min-width: 400px;
     
-    overflow: auto;
   }
 
   
@@ -116,6 +115,8 @@ Global recomendado
   
 justify-content: center;
 align-items: center;
+
+overflow: auto;
 
 
 
