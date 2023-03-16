@@ -73,3 +73,69 @@ Global recomendado
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .cards-box{
+      /*
+      background-color: #a8000044;
+    */
+    height: 550px;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+
+    
+  justify-content: center;
+  align-items: center;
+
+
+
+  }
+  .card-proyect{
+    font-size: 0.5rem;
+    background-color: #00039e;
+    border-radius: 5rem;
+    margin: .5rem;
+    height: 400px;
+    width: 400px;
+    min-width: 400px;
+    
+    overflow: auto;
+  }
+
+  
+  .tecs-box{ 
+    /*
+    background-color: #a8000044; 
+    */
+  height: 550px;
+  width: 80vw;
+  display: flex;
+  flex-direction: row; 
+
+  
+justify-content: center;
+align-items: center;
+
+
+
+}
+.card-tecs{
+  font-size: 0.5rem;
+  background-color: var(--blanco);
+  color: var(--negro);
+  border-radius: 1rem;
+  margin: .5rem;
+  height: 250px;
+  width: 250px; 
+  display: flex;
+  flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+  
+}
+.card-tecs > img{
+    height: 150px;
+    width: 150px; 
+
+}
