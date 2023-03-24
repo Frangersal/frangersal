@@ -26,26 +26,30 @@ Global recomendado
     background-color: var(--blanco);
     color: var(--negro);
 }
+.titulo-fgsm{
+    
+    margin: 5rem auto auto;
+}
 .titulos{
-    margin: 5rem auto 0rem auto;
+    margin: 1.5rem;
     z-index: 500;
 }
 .img-perfil{
     height: 20rem;
-    border-radius: 30%;
+    border-radius: 50%;
 }
 .nombre{
-    width: 70%;
+    width: 80%;
     font-family: 'Roboto Mono', monospace;
     font-size: 2.5rem;
 }
 .puesto{
-    width: 70%;
+    width: 80%;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.5rem;
 }
 .perfil-pro{
-    width: 70%;
+    width: 80%;
     text-align: justify;
     font-size: 1.5rem;
 }
@@ -74,69 +78,102 @@ Global recomendado
     background-size: cover;
   }
 
-  .cards-box{
-      /*
-      background-color: #a8000044;
-    */
-    height: 550px;
-    width: 80vw;
-    display: flex;
-    flex-direction: row;
-    overflow: auto;
+.cards-box{
+    /*
+    background-color: #a8000044;
+*/
+height: 550px;
+width: 80vw;
+display: flex;
+flex-direction: row;
+overflow: auto;
 
     
-  justify-content: center;
-  align-items: center;
+justify-content: center;
+align-items: center;
 
 
 
   }
-  .card-proyect{
+.card-proyect{
     font-size: 0.5rem;
-    background-color: #00039e79;
+    color: var(--blanco);
+    background-color: #064428c2;
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
     border-radius: 5rem;
-    margin: .5rem;
-    height: 400px;
-    width: 400px;
-    min-width: 400px;
+    margin: 0rem 1rem 3rem;
+    height: 40rem;
+    width: 28rem;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.name-proyect{ 
+    width: 100%;
+    padding: 2rem 1rem 1rem;
+    font-size: 2rem;
+}
+.link-proyect{
+    background-color: #ecede7c9;
+    border-radius: 5rem;
+    height: 3rem;
+    width: 80%;
+    margin: auto auto 2.5rem auto;
+    font-size: 2rem;
     
-  }
+}
+.logo-proyect{
+    width: 100%;
+    padding: 2rem;
+    border-radius: 5rem;
+}
+
 
   
   .tecs-box{ 
     /*
     background-color: #a8000044; 
     */
-  height: 550px;
-  width: 80vw;
-  display: flex;
-  flex-direction: row; 
+    height: 40rem;
+    width: 80vw;
+    display: flex !important;
+    flex-direction: row; 
 
   
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
 
-overflow: auto;
+    overflow: auto;
 
 
 
 }
 .card-tecs{
-  font-size: 0.5rem;
-  background-color: var(--blanco);
-  color: var(--negro);
-  border-radius: 1rem;
-  margin: .5rem;
-  height: 250px;
-  width: 250px; 
-  display: flex;
-  flex-wrap: wrap;
-justify-content: center;
-align-items: center;
+    font-size: 0.5rem;
+    background-color: var(--blanco);
+    color: var(--negro);
+    border-radius: 1rem;
+    margin: .5rem;
+    height: 250px;
+    width: 250px; 
+    max-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   
 }
-.card-tecs > img{
-    height: 150px;
-    width: 150px; 
 
+.logo-tec{  
+    height: 10rem; 
+    margin: 1rem;
+}
+.logo-php{
+    width: 10rem; 
+    margin: 3rem auto 3rem;
+
+}
+.name-tec{
+    width: 100%; 
 }
