@@ -36,10 +36,11 @@ Global recomendado
 }
 .img-perfil{
     height: 20rem;
-    border-radius: 50%;
+    border-radius: 3rem;
 }
 .nombre{
     width: 80%;
+    max-width: 30rem;
     font-family: 'Roboto Mono', monospace;
     font-size: 2.5rem;
 }
@@ -101,7 +102,7 @@ align-items: center;
     background-color: #064428c2;
     backdrop-filter: blur(5px);
     border: 1.5px solid rgba(209, 213, 219, 0.3);
-    border-radius: 5rem;
+    border-radius: 3rem;
     margin: 0rem 1rem 3rem;
     height: 40rem;
     width: 28rem;
@@ -115,18 +116,19 @@ align-items: center;
     font-size: 2rem;
 }
 .link-proyect{
-    background-color: #ecede7c9;
-    border-radius: 5rem;
+    background-color: var(--blanco-);
+    border-radius: 3rem;
     height: 3rem;
     width: 80%;
     margin: auto auto 2.5rem auto;
     font-size: 2rem;
     
 }
-.logo-proyect{
-    width: 100%;
-    padding: 2rem;
-    border-radius: 5rem;
+.logo-proyect{  
+    border-radius: 3rem;
+    width: 90%;
+    height: auto !important;
+    margin: 0.1rem !important;
 }
 
 
@@ -135,7 +137,7 @@ align-items: center;
     /*
     background-color: #a8000044; 
     */
-    height: 40rem;
+    height: 30rem;
     width: 80vw;
     display: flex !important;
     flex-direction: row; 
@@ -153,7 +155,7 @@ align-items: center;
     font-size: 0.5rem;
     background-color: var(--blanco);
     color: var(--negro);
-    border-radius: 1rem;
+    border-radius: 3rem;
     margin: .5rem;
     height: 250px;
     width: 250px; 

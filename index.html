@@ -73,7 +73,7 @@
                     Soy un desarrollador Full Stack Java Jr. y Web
                     Developer Jr. con habilidades en Java, PHP, MySQL,
                     Spring, Laravel y Bootstrap. Me apasiona el desarrollo
-                    web sobre todo la parte del backend, estoy siempre
+                    web sobre todo la parte del Backend, estoy siempre
                     buscando mejorar y estar actualizado en las últimas
                     tecnologías. Estoy emocionado por enfrentar nuevos
                     desafíos y ser parte de su equipo.
@@ -87,38 +87,73 @@
                     < Proyectos />
                 </h2>
 
-                <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                 
+                <div id="carouselProyectos" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <!-- 
+
+                            <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        -->
+                        
+                    </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-    
-                            <div class="card-proyect">
-                                <h3 class="name-proyect">Tutorias TecNM</h3>
-                                <img class="logo-proyect" src="./src/img/TecNMCAcapulco.jpg" alt="">
-                                <a class="link-proyect" href="#">Visitar pagina web</a>
+                        <div class="carousel-item  active">
+                            <div class="tecs-box">
+
+                                <div class="card-tecs">
+                                    <img class="logo-tec logo-proyect" src="./src/img/TecNMCAcapulco.jpg" alt="">
+                                    <h3 class="name-tec">Tutorias TecNM</h3>
+                                </div>
+                                <div class="card-tecs">
+                                    <img class="logo-tec logo-proyect" src="./src/img/ViandaMarket.jpg" alt="">
+                                    <h3 class="name-tec">Vianda Market</h3>
+                                </div>
+                                <!-- 
+
+                                    <div class="card-tecs">
+                                        <img class="logo-tec" src="./src/img/tecsvg/javascript.svg" alt="">
+                                        <h3 class="name-tec">JavaScript</h3>
+                                    </div>
+                                -->
                             </div>
     
                         </div>
-                        <div class="carousel-item">
-    
-                            <div class="card-proyect">
-                                <h3 class="name-proyect">Vianda Market</h3>
-                                <img class="logo-proyect" src="./src/img/ViandaMarket.jpg" alt="">
-                                <a class="link-proyect" href="#">Visitar pagina web</a>
-                            </div>
-    
-                        </div> 
+<!--
+    <div class="carousel-item">
+        <div class="tecs-box">
+
+            <div class="card-tecs ">
+                <img class="logo-tec" src="./src/img/tecsvg/mysql.svg" alt="">
+                <h3 class="name-tec">MySQL</h3>
+            </div>
+            <div class="card-tecs">
+                <img class="logo-tec" src="./src/img/tecsvg/git.svg" alt="">
+                <h3 class="name-tec">GIT</h3>
+            </div>
+            <div class="card-tecs">
+                <img class="logo-tec" src="./src/img/tecsvg/spring.svg" alt="">
+                <h3 class="name-tec">Spring</h3>
+            </div>
+        </div>    
+    </div> 
+
+-->
+                         
+                        
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel1"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectos"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel1"
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProyectos"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+ 
 
             </div>
 
@@ -130,11 +165,11 @@
                 </h2>
 
                 
-                <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselTecnologias" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselTecnologias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselTecnologias" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselTecnologias" data-bs-slide-to="2" aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item  active">
@@ -191,12 +226,12 @@
                         </div> 
                         
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTecnologias"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselTecnologias"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
@@ -214,22 +249,14 @@
                 </h2>
 
 
-                <div class="cards-box">
-                    <div class="card-proyect">
-                        <img src="" alt="">
-                        <h3>Nombre del proyecto</h3>
-
-                    </div>
-                    <div class="card-proyect">
-                        <img src="" alt="">
-                        <h3>Nombre del proyecto</h3>
-
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-
+    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d916.4782316887188!2d-106.45339409598547!3d23.246255416339956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869f5563fcb9917b%3A0x8db8e599064c9c26!2sVianda%20Market!5e0!3m2!1ses-419!2smx!4v1679693162530!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+ 
+   <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"
+   async defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -237,9 +264,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
-    <script>
-        
-    </script>
+        <script>
+            function initMap() {
+              var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 23.246207359376694, lng: -106.45348126777816},
+                zoom: 8,
+                styles: [
+                  {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [
+                      { "color": "#000" }
+                    ]
+                  },
+                  {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                      { "color": "#00bfff" }
+                    ]
+                  }
+                ]
+              });
+            }
+          </script>
 </body>
 
 </html>
