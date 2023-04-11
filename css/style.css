@@ -44,8 +44,11 @@ Global recomendado
     margin: 5rem auto auto;
 }
 .titulos{
-    margin: 1.5rem;
+    margin-top: 40px;
     z-index: 500;
+    align-items: center;
+    font-family: Klein;
+    font-size: 30px;
 }
 /*
 Cara
@@ -120,12 +123,24 @@ Cara
     width: 38px;
     height: 38px;
 }
+.boton-icono-int{
+    width: 35px;
+    height: 35px;
+    background-color: var(--negro);
+    border-radius: 12%;
+}
+.internet-icono{
+    color: var(--blanco);
+    width: 26px;
+    height: 26px;
+
+}
 .pie-frangersal{
     margin-bottom: 1px;
 }
 .seccion-f{
     font-family: 'Roboto Mono', monospace;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,6 +198,7 @@ align-items: center;
     width: 100%;
     padding: 2rem 1rem 1rem;
     font-size: 2rem;
+    font-family: Klein;
 }
 .link-proyect{
     background-color: var(--blanco-);
@@ -194,7 +210,7 @@ align-items: center;
     
 }
 .logo-proyect{  
-    border-radius: 3rem;
+     
     width: 90%;
     height: auto !important;
     margin: 0.1rem !important;
@@ -205,9 +221,9 @@ align-items: center;
   .tecs-box{ 
     /*
     background-color: #a8000044; 
-    */
-    height: 30rem;
-    width: 80vw;
+    */ 
+    height: 550px;
+    width: 85vw;
     display: flex !important;
     flex-direction: row; 
 
@@ -220,20 +236,37 @@ align-items: center;
 
 
 }
+
+.carousel-control-prev-icon {
+    height: 65px!important;
+    background-image: url(../src/icons/fontawesome-free-6.4.0-web/svgs/solid/chevron-left.svg)!important;
+}
+.carousel-control-next-icon{
+    height: 65px!important;
+    background-image: url(../src/icons/fontawesome-free-6.4.0-web/svgs/solid/chevron-right.svg)!important;
+}
 .card-tecs{
     font-size: 0.5rem;
-    background-color: var(--blanco);
-    color: var(--negro);
-    border-radius: 3rem;
+    background-color: var(--negro);
+    color: var(--blanco); 
     margin: .5rem;
-    height: 250px;
-    width: 250px; 
+    width: 251px;
+    height: 380px;
     max-width: 200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   
+}
+.card_boton{
+    
+    margin-top: 0px;
+    width: 237px;
+    height: 80px;  
+    background-color: var(--negro);
+    display: inline-flex;
+    justify-content: space-around;
 }
 
 .logo-tec{  
@@ -247,4 +280,5 @@ align-items: center;
 }
 .name-tec{
     width: 100%; 
+    font-family: Klein;
 }
