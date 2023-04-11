@@ -8,6 +8,11 @@ Global recomendado
     font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
     font-size: 13px;
 }
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 :root {
     --verde: #064428;
     --blanco: #ECEDE7;
@@ -18,6 +23,14 @@ Global recomendado
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@font-face {
+    font-family: Klein;
+    src: url(../src/font/Klein-Bold.ttf);
+}
+@font-face {
+    font-family: TTChocolates;
+    src: url(../src/font/TT\ Chocolates\ Trial\ ExtraLight.otf);
+}
 .bg-verde{
     background-color: var(--verde);
     color: var(--blanco);
@@ -34,29 +47,85 @@ Global recomendado
     margin: 1.5rem;
     z-index: 500;
 }
+/*
+Cara
+*/
+.cara{ 
+    width: 299px;
+    height: 346px; 
+}
+
 .img-perfil{
-    height: 20rem;
-    border-radius: 3rem;
+    height: 195px;
+    width: 195px;
+    border-radius: 50%;
 }
 .nombre{
-    width: 80%;
-    max-width: 30rem;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 2.5rem;
+    width: 299px;
+    height: 79px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Klein;
+    font-size: 20px;
+    border-bottom: var(--blanco) 1px solid;
 }
 .puesto{
-    width: 80%;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.5rem;
+    margin-top: 16px;
+    width: 299px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: TTChocolates;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+/*
+Cara
+*/
+.descripcion{
+    width: 321px;
+    height: 346px; 
+    line-height: 19px;
+}
+.img-fgsm{
+    width: 258px;
+    height: 70px; 
+    margin-bottom: 12px;
+
 }
 .perfil-pro{
-    width: 80%;
+    width: 318px;
+    height: 165px; 
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: 16px;
+    font-family: TTChocolates;
+}
+.descripcion_boton{
+    
+    margin-top: 0px;
+    width: 318px;
+    height: 75px;  
+    background-color: #00039e00;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.boton-cuadrado{
+    width: 75px;
+    height: 75px;
+    background-color: var(--blanco);
+}
+.boton-icono{
+    width: 38px;
+    height: 38px;
+}
+.pie-frangersal{
+    margin-bottom: 1px;
 }
 .seccion-f{
     font-family: 'Roboto Mono', monospace;
-    min-height: 520px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

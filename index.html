@@ -8,21 +8,25 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/all.min.css">
     <!--
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
         
     -->
     <title>Portafolio Francisco G Salinas</title>
-    <link rel="icon" type="image/x-icon" href="./src/img/fgsm-blanco.png">
+    <link rel="icon" type="image/x-icon" href="./src/img/FGSM-Primary.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
-<body>
+<body> 
+
+
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark  bg-verde">
-        <div class="container-fluid">
+        <div class="container-fluid"> 
+
             <a class="navbar-brand" href="#">
-                <img src="./src/img/fgsm-blanco.png" alt="Logo" width="30" height="30"
+                <img src="./src/img/FGSM-Primary.png" alt="Logo" width="30" height="30"
                     class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -50,34 +54,64 @@
             </div>
         </div>
     </nav>
+    <!-- 
+        FIN MENU
+    -->
+    
     <div class="container-fluid text-center">
-        <!-- 
-            FIN MENU
-         -->
-        <div class="row">
-            <div class="col-12 bg-verde">
-                <h1 class="titulo-fgsm">
-                    < Frangersal />
-                </h1>
-            </div>
-        </div>
-        <div class="row bg-verde">
-            <div class="col-xs-12 col-sm-12 col-md-6  seccion-f">
-                <img class="img-perfil" src="./src/img/perfil.png" alt="Mi Foto">
-                <h2 class="nombre">Francisco Gerardo Salinas Mendoza.</h2>
-                <h2 class="puesto">Java Full Stack Developer Jr.</h2>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6  seccion-f">
-                <h2>Hola mundo!</h2>
-                <p class="perfil-pro">
-                    Soy un desarrollador Full Stack Java Jr. y Web
-                    Developer Jr. con habilidades en Java, PHP, MySQL,
-                    Spring, Laravel y Bootstrap. Me apasiona el desarrollo
-                    web sobre todo la parte del Backend, estoy siempre
-                    buscando mejorar y estar actualizado en las últimas
-                    tecnologías. Estoy emocionado por enfrentar nuevos
-                    desafíos y ser parte de su equipo.
-                </p>
+
+        <div class="row seccion-f"> 
+            <div class="row bg-verde">
+                <div class="col-xs-12 col-sm-12 col-md-6  seccion-f ">
+                    <div class="cara">
+                        <img class="img-perfil" src="./src/img/Perfil Frangersal 2023.png" alt="Mi Foto">
+                        <h2 class="nombre">FRANCISCO GERARDO SALINAS MENDOZA</h2>
+                        <h2 class="puesto">JAVA FULL STACK<br>DEVELOPER JR</h2>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6  seccion-f ">
+                    <div class="descripcion">
+                        <img class="img-fgsm" src="./src/img/FGMS Lineal P.svg" alt="Mi Foto">
+                        <p class="perfil-pro">
+                            Soy un desarrollador Full Stack Java Jr. y Web
+                            Developer Jr. con habilidades en Java, PHP, MySQL,
+                            Spring, Laravel y Bootstrap. Me apasiona el desarrollo
+                            web sobre todo la parte del Backend, estoy siempre
+                            buscando mejorar y estar actualizado en las últimas
+                            tecnologías. Estoy emocionado por enfrentar nuevos
+                            desafíos y ser parte de su equipo.
+                        </p>
+                        <div class="descripcion_boton">
+                            <div class="boton-cuadrado center">
+                                <img class="boton-icono" 
+                                src="./src/icons/fontawesome-free-6.4.0-web/svgs/brands/square-whatsapp.svg"  
+                                alt="">
+                            </div>
+                            <div class="boton-cuadrado center">
+                                <img class="boton-icono" 
+                                src="./src/icons/fontawesome-free-6.4.0-web/svgs/brands/linkedin.svg"  
+                                alt="">
+                            </div>
+                            <div class="boton-cuadrado center">
+                                <img class="boton-icono" 
+                                src="./src/icons/fontawesome-free-6.4.0-web/svgs/brands/square-github.svg"  
+                                alt="">
+                            </div>
+                            <div class="boton-cuadrado center">
+                                <img class="boton-icono" 
+                                src="./src/icons/fontawesome-free-6.4.0-web/svgs/solid/square-envelope.svg"  
+                                alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <p class="pie-frangersal">&lt;Frangersal/&gt;</p>
+                </div>
+
+
             </div>
         </div>
 
@@ -87,15 +121,16 @@
                     < Proyectos />
                 </h2>
 
-                 
+
                 <div id="carouselProyectos" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
                         <!-- 
 
                             <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         -->
-                        
+
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item  active">
@@ -117,9 +152,9 @@
                                     </div>
                                 -->
                             </div>
-    
+
                         </div>
-<!--
+                        <!--
     <div class="carousel-item">
         <div class="tecs-box">
 
@@ -139,8 +174,8 @@
     </div> 
 
 -->
-                         
-                        
+
+
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectos"
                         data-bs-slide="prev">
@@ -153,7 +188,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
- 
+
 
             </div>
 
@@ -164,12 +199,15 @@
                     < Tecnologias />
                 </h2>
 
-                
+
                 <div id="carouselTecnologias" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselTecnologias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselTecnologias" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselTecnologias" data-bs-slide-to="2" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselTecnologias" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselTecnologias" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselTecnologias" data-bs-slide-to="2"
+                            aria-label="Slide 2"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item  active">
@@ -188,7 +226,7 @@
                                     <h3 class="name-tec">JavaScript</h3>
                                 </div>
                             </div>
-    
+
                         </div>
                         <div class="carousel-item">
                             <div class="tecs-box">
@@ -205,8 +243,8 @@
                                     <img class="logo-tec" src="./src/img/tecsvg/spring.svg" alt="">
                                     <h3 class="name-tec">Spring</h3>
                                 </div>
-                            </div>    
-                        </div> 
+                            </div>
+                        </div>
                         <div class="carousel-item">
                             <div class="tecs-box">
 
@@ -222,9 +260,9 @@
                                     <img class="logo-tec" src="./src/img/tecsvg/figma.svg" alt="">
                                     <h3 class="name-tec">Figma</h3>
                                 </div>
-                            </div>    
-                        </div> 
-                        
+                            </div>
+                        </div>
+
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselTecnologias"
                         data-bs-slide="prev">
@@ -237,7 +275,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                 
+
             </div>
         </div>
 
@@ -251,12 +289,7 @@
 
             </div>
         </div>
-    </div>
-    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d916.4782316887188!2d-106.45339409598547!3d23.246255416339956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869f5563fcb9917b%3A0x8db8e599064c9c26!2sVianda%20Market!5e0!3m2!1ses-419!2smx!4v1679693162530!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
- 
-   <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"
-   async defer></script>
+    </div> 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -264,30 +297,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
-        <script>
-            function initMap() {
-              var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 23.246207359376694, lng: -106.45348126777816},
-                zoom: 8,
-                styles: [
-                  {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [
-                      { "color": "#000" }
-                    ]
-                  },
-                  {
-                    "featureType": "water",
-                    "elementType": "geometry",
-                    "stylers": [
-                      { "color": "#00bfff" }
-                    ]
-                  }
-                ]
-              });
-            }
-          </script>
+
 </body>
 
 </html>
