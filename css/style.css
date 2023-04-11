@@ -181,6 +181,73 @@ Cara
   }
   
 /*
+------ click
+*/
+.boton-cuadrado {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    background-color: var(--blanco);
+    overflow: hidden;
+  }
+  
+  .boton-icono {
+    width: 38px;
+    height: 38px;
+    transition: transform 0.2s ease-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .boton-cuadrado::before,
+  .boton-cuadrado::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--negro);
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+  
+  .boton-cuadrado::before {
+    left: 0;
+    content: "<";
+  }
+  
+  .boton-cuadrado::after {
+    right: 0;
+    content: "/>";
+  }
+  
+  .boton-cuadrado:hover .boton-icono {
+    transform: scale(0.8);
+  }
+  
+  .boton-cuadrado:hover::before,
+  .boton-cuadrado:hover::after {
+    opacity: 1;
+  }
+  
+  .boton-cuadrado:active {
+    animation: saltar 0.2s linear;
+  }
+  
+  @keyframes saltar {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  
+/*
 ------
 */
 
