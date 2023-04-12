@@ -44,7 +44,7 @@ Global recomendado
     margin: 5rem auto auto;
 }
 .titulos{
-    margin-top: 40px;
+    margin-top: 50px;
     z-index: 500;
     align-items: center;
     font-family: Klein;
@@ -222,7 +222,7 @@ Cara
   }
   
   .boton-cuadrado:hover .boton-icono {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
   
   .boton-cuadrado:hover::before,
