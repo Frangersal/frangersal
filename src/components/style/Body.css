@@ -6,6 +6,16 @@
 }
 
 /* Estilos para el componente Body */
+.body-container-dark {
+    background-image: url('../../assets/img/code-dark.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-attachment: fixed;
+    padding: 2rem 0; /* Espaciado vertical */
+    /* Removido min-height: 100vh para que se ajuste al contenido */
+}
 .body-container {
     background-image: url('../../assets/img/code.webp');
     background-size: cover;
