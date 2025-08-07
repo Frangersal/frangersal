@@ -25,12 +25,12 @@ Global recomendado
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @font-face {
     font-family: Klein, "Arial Black", "Helvetica Bold", Arial, sans-serif;
-    src: url(../fonts/Klein-Bold.ttf) format('truetype');
+    src: url(./assets/fonts/Klein-Bold.ttf) format('truetype');
     font-display: swap;
 }
 @font-face {
     font-family: TTChocolates, "Helvetica Light", "Arial Light", Arial, sans-serif;
-    src: url(../fonts/TT\ Chocolates\ Trial\ ExtraLight.otf) format('opentype');
+    src: url(./assets/fonts/TT\ Chocolates\ Trial\ ExtraLight.otf) format('opentype');
     font-display: swap;
 }
 .bg-verde{

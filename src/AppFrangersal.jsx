@@ -1,22 +1,18 @@
 import { useState } from 'react'
 import './index.css'
 import './App.css'
-import './assets/icons/fontawesome-free-6.4.0-web/css/all.min.css'
 import Header from './components/Header'
+import Body from './components/Body'
 import Footer from './components/Footer'
 
 const AppFrangersal = () => {
 
   return (
     <>
-      <div className="container-fluid">
         <Header />
-        <div>
-          <h1>Frangersal - React App Funcionando!</h1>
-          <p>Si ves esto, el proyecto está renderizando correctamente.</p>
-        </div>
+        <Body />
         <Footer />
-      </div>
+        
     </>
   )
 }
