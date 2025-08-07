@@ -39,10 +39,10 @@ const Header = () => {
                                 <a className="nav-link active fs-5 fw-bold" aria-current="page" href="#perfil-section">Perfil</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link fs-5 fw-bold" href="#proyectos-section">Proyectos</a>
+                                <a className="nav-link fs-5 fw-bold" href="#tecnologias-section">Tecnologías</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link fs-5 fw-bold" href="#tecnologias-section">Tecnologías</a>
+                                <a className="nav-link fs-5 fw-bold" href="#proyectos-section">Proyectos</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link fs-5 fw-bold" href="#descargas-section">Descargas</a>
