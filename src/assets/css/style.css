@@ -51,6 +51,9 @@ Global recomendado
     backdrop-filter: blur(3px);
     overflow: hidden;
     padding: 0%;
+    box-shadow: 0 0 20px rgba(6, 68, 40, 0.2), 
+                0 0 40px rgba(6, 68, 40, 0.2),
+                0 0 60px rgba(6, 68, 40, 0.1);
 }
 
 .titulo-fgsm{
@@ -90,7 +93,7 @@ Cara
     justify-content: center;
     align-items: center;
     font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     position: relative;
 }
 
@@ -455,6 +458,7 @@ align-items: center;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 40px;
 }
 
 .window-header {
@@ -502,5 +506,40 @@ align-items: center;
 
 .contenido-ventana {
     padding: 20px;
+}
+
+.tecnologias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.caja-tecnologia {
+    width: 100px;
+    height: 100px;
+    background-color: var(--blanco);
+    border: 2px solid var(--verde);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caja-tecnologia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(6, 68, 40, 0.3);
+    background-color: #f0f0f0;
+}
+
+.titulo-tecnologias {font-family: 'Furore', sans-serif;
+    font-size: 30px;
+    color: var(--blanco);
+    text-align: center;
+    margin: 0px 0 20px 0;
 }
 

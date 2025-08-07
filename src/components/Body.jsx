@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import foto from '../assets/img/Perfil Frangersal 2025.jpg'
 import whatsappIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/brands/square-whatsapp.svg'
 import linkedinIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/brands/linkedin.svg'
@@ -20,12 +20,12 @@ const Body = () => {
 
     return (
         <>
-            <div className="body-container">
+            <div className=  "body-container">
                 <div className="container-limitado">
                     <div className="row seccion-f">
                         <div className="row seccion-verde">
                             <div className="window-header">
-                                <div className="window-title">Perfil y Contacto</div>
+                                <h1 className="window-title">Perfil y Contacto</h1>
                                 <div className="window-controls">
                                     <button className="window-btn close"></button>
                                     <button className="window-btn minimize"></button>
@@ -78,14 +78,70 @@ const Body = () => {
                                             </div>
                                         </div>
                                     </div>
-                                <div className="col-xs-12 col-sm-12 col-md-12 animar-sec">
-                                    <p className="pie-frangersal animar-pop mt-4">&lt;FGSM/&gt;</p>
-                                </div>
+                                    <div className="col-xs-12 col-sm-12 col-md-12 animar-sec">
+                                        <p className="pie-frangersal animar-pop mt-4">&lt;FGSM/&gt;</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                <div className="container-limitado">
+                    <div className="row seccion-f">
+                        <div className="col-12">
+                            <h1 className="titulo-tecnologias">Tecnologias</h1>
+                            <div className="tecnologias-container">
+                                <div className="caja-tecnologia">
+                                    <span>HTML</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>CSS</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>JS</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>React</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>Java</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>PHP</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>MySQL</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>Spring</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>HTML</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>CSS</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>JS</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>React</span>
+                                </div>
+                                <div className="caja-tecnologia">
+                                    <span>React</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-xs-12 col-sm-12 col-md-12 animar-sec">
+                            <p className="pie-frangersal animar-pop mt-4">&lt;FGSM/&gt;</p>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </>
     )
