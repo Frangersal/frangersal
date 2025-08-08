@@ -1,0 +1,58 @@
+/*
+Global recomendado
+*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root {
+    --verde: #064428;
+    --blanco: #ECEDE7;
+    --negro: #000;
+    --test1: #00039e;
+    --test2: #e2c418;
+    --test3: #a80000;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+@font-face {
+    font-family: Klein, "Arial Black", "Helvetica Bold", Arial, sans-serif;
+    src: url(./assets/fonts/Klein-Bold.ttf) format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: TTChocolates, "Helvetica Light", "Arial Light", Arial, sans-serif;
+    src: url(./assets/fonts/TT\ Chocolates\ Trial\ ExtraLight.otf) format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Furore';
+    src: url('./assets/fonts/Furore.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.bg-verde {
+    background-color: var(--verde);
+    color: var(--blanco);
+}
+
+.bg-blanco {
+    background-color: var(--blanco);
+    color: var(--negro);
+}

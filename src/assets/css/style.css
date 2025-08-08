@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@font-face {
+    font-family: Klein, "Arial Black", "Helvetica Bold", Arial, sans-serif;
+    src: url(../fonts/Klein-Bold.ttf) format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: TTChocolates, "Helvetica Light", "Arial Light", Arial, sans-serif;
+    src: url(../fonts/TT\ Chocolates\ Trial\ ExtraLight.otf) format('opentype');
+    font-display: swap;
+}
 /*
 Global recomendado
 */
@@ -21,16 +33,7 @@ Global recomendado
     --test2: #e2c418;
     --test3: #a80000;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-@font-face {
-    font-family: Klein;
-    src: url(../src/font/Klein-Bold.ttf);
-}
-@font-face {
-    font-family: TTChocolates;
-    src: url(../src/font/TT\ Chocolates\ Trial\ ExtraLight.otf);
-}
+
 .bg-verde{
     background-color: var(--verde);
     color: var(--blanco);
@@ -39,6 +42,20 @@ Global recomendado
     background-color: var(--blanco);
     color: var(--negro);
 }
+
+.seccion-verde {
+  color: var(--blanco);
+    border-radius: 20px;
+    border: var(--verde)  solid 1px;
+    background-color: #011d10de;
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+    padding: 0%;
+    box-shadow: 0 0 20px rgba(6, 68, 40, 0.2), 
+                0 0 40px rgba(6, 68, 40, 0.2),
+                0 0 60px rgba(6, 68, 40, 0.1);
+}
+
 .titulo-fgsm{
     
     margin: 5rem auto auto;
@@ -47,8 +64,12 @@ Global recomendado
     margin-top: 50px;
     z-index: 500;
     align-items: center;
-    font-family: Klein;
+    font-family: Klein, "Arial Black", "Helvetica Bold", Arial, sans-serif;
     font-size: 30px;
+}
+
+.btn-header{
+  font-size: 30px;
 }
 /*
 Cara
@@ -59,28 +80,42 @@ Cara
 }
 
 .img-perfil{
-    height: 195px;
-    width: 195px;
-    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    border-radius: 20%;
+    border: var(--verde) solid 1px;
 }
+
 .nombre{
     width: 299px;
     height: 79px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Klein;
-    font-size: 20px;
-    border-bottom: var(--blanco) 1px solid;
+    font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    position: relative;
 }
+
+.nombre::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 1px;
+    background-color: var(--blanco);
+}
+
 .puesto{
-    margin-top: 16px;
+    margin-top: 0px;
     width: 299px;
     height: 47px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: TTChocolates;
+    font-family: 'Furore', sans-serif;
     font-size: 18px;
     letter-spacing: 1px;
 }
@@ -88,27 +123,23 @@ Cara
 Cara
 */
 .descripcion{
-    width: 321px;
+    width: 350px;
     height: 346px; 
     line-height: 19px;
 }
-.img-fgsm{
-    width: 258px;
-    height: 70px; 
-    margin-bottom: 12px;
 
-}
 .perfil-pro{
-    width: 318px;
-    height: 165px; 
+    width: 350px;
+    height: 200px; 
     text-align: justify;
-    font-size: 16px;
-    font-family: TTChocolates;
+    font-size: 15px;
+    font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
+    line-height: 1.3;
 }
 .descripcion_boton{
     
     margin-top: 0px;
-    width: 318px;
+    width: 350px;
     height: 75px;  
     background-color: #00039e00;
     display: inline-flex;
@@ -128,9 +159,15 @@ Cara
     position: relative;
     width: 75px;
     height: 75px;
-    background-color: var(--blanco);
     padding: 5px;
-    overflow: hidden; /* Para que los pseudo-elementos no se salgan del botón */
+    overflow: hidden;
+    border-radius: 20px;
+    border: var(--verde) solid 2px;
+    background: linear-gradient(145deg, var(--blanco), #d5d5d5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 
+                inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
   
   .boton-icono {
@@ -152,6 +189,7 @@ Cara
     color: var(--negro);
     opacity: 0;
     transition: opacity 0.2s ease-out;
+    font-family: 'Furore', sans-serif;
   }
   
   /* Estilos para el pseudo-elemento ::before */
@@ -168,12 +206,13 @@ Cara
   
   /* Estilos al pasar el cursor por encima */
   .boton-cuadrado:hover{
-    background-color: #d8d8d8;
+    background: linear-gradient(145deg, #42ff8e, #2ecc71);
+    box-shadow: 0 12px 24px rgba(66, 255, 142, 0.4), 
+                inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
+    border-color: #2ecc71;
+  }
 
-  }
-  .boton-cuadrado:hover .boton-icono {
-    transform: scale(0.9);
-  }
   
   .boton-cuadrado:hover::before,
   .boton-cuadrado:hover::after {
@@ -183,13 +222,7 @@ Cara
 /*
 ------ click
 */
-.boton-cuadrado {
-    position: relative;
-    width: 75px;
-    height: 75px;
-    background-color: var(--blanco);
-    overflow: hidden;
-  }
+
   
   .boton-icono {
     width: 38px;
@@ -209,6 +242,7 @@ Cara
     color: var(--negro);
     opacity: 0;
     transition: opacity 0.2s ease-out;
+    font-family: 'Furore', sans-serif;
   }
   
   .boton-cuadrado::before {
@@ -222,7 +256,7 @@ Cara
   }
   
   .boton-cuadrado:hover .boton-icono {
-    transform: scale(0.9);
+    transform: scale(0.7);
   }
   
   .boton-cuadrado:hover::before,
@@ -269,7 +303,7 @@ Cara
 }
 .seccion-f{
     font-family: 'Roboto Mono', monospace;
-    min-height: 80vh;
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -327,7 +361,7 @@ align-items: center;
     width: 100%;
     padding: 2rem 1rem 1rem;
     font-size: 2rem;
-    font-family: Klein;
+    font-family: Klein, "Arial Black", "Helvetica Bold", Arial, sans-serif;
 }
 .link-proyect{
     background-color: var(--blanco-);
@@ -415,9 +449,217 @@ align-items: center;
 }
 .name-tec{
     width: 100%; 
-    font-family: Klein;
+    font-family: Klein, "Arial Black", "Helvetica Bold", Arial, sans-serif;
 }
 
-.tec-fondo{
-
+.container-limitado {
+    width: 100%;
+    max-width: 992px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 40px;
 }
+
+.window-header {
+    background-color: var(--verde);
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.window-title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: 0%;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.window-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.window-btn.close {
+    background-color: #ff5f57;
+}
+
+.window-btn.minimize {
+    background-color: #ffbd2e;
+}
+
+.window-btn.maximize {
+    background-color: #28ca42;
+}
+
+.contenido-ventana {
+    padding: 20px;
+}
+
+.tecnologias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.caja-tecnologia {
+    width: 100px;
+    height: 100px;
+    background-color: var(--blanco);
+    border: 1px solid var(--verde);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.img-tec{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* mantiene proporción sin deformar */
+    display: block;
+}
+
+.caja-tecnologia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+}
+
+/* Reforzar hover verde para las cajas con boton-cuadrado (más específico y después) */
+.tecnologias-container .caja-tecnologia.boton-cuadrado:hover {
+    box-shadow: 0 20px 27px rgba(66, 255, 142, 0.45),
+                inset 0 2px 0 rgba(255, 255, 255, 0.35);
+    border-color: #2ecc71;
+    transform: translateY(-6px);
+    background: linear-gradient(145deg, #42ff8e, #2ecc71); /* sobreescribe el bg gris */
+}
+
+/* Sombra verde para las cajas de tecnologías */
+.tecnologias-container .caja-tecnologia.boton-cuadrado {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 8px 6px 22px; /* espacio para el texto inferior */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(66, 255, 142, 0.25),
+              inset 0 2px 0 rgba(255, 255, 255, 0.25);
+  border-color: #2ecc71;
+}
+
+/* Imagen de la tecnología */
+.tecnologias-container .caja-tecnologia.boton-cuadrado .img-tec {
+  /* quitamos restricciones que generaban conflicto */
+  /* max-width: 60%;
+     max-height: 60%; */
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  position: relative;
+  z-index: 1; /* debajo del texto */
+  transform: translateY(4px);
+}
+
+/* Texto inferior (oculto inicialmente) */
+.tecnologias-container .caja-tecnologia.boton-cuadrado span {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--negro);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+  z-index: 2; /* encima de la imagen */
+}
+
+/* Hover: imagen sube y texto aparece abajo */
+.tecnologias-container .caja-tecnologia.boton-cuadrado:hover .img-tec {
+  transform: translateY(-5px);
+}
+.tecnologias-container .caja-tecnologia.boton-cuadrado:hover span {
+  opacity: 1;
+}
+
+/* Quitar "<" y "/>" solo en estas cajas */
+.tecnologias-container .caja-tecnologia.boton-cuadrado::before,
+.tecnologias-container .caja-tecnologia.boton-cuadrado::after {
+  content: none !important;
+}
+
+.titulo-tecnologias {
+    font-family: 'Furore', sans-serif;
+    font-size: 30px;
+    color: var(--blanco);
+    text-align: center;
+    margin: 0px 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative; /* asegurar contexto para el pseudo-elemento */
+    z-index: 0;
+    letter-spacing: 0.10em;
+}
+
+/* Anular pseudo-líneas previas sin bloquear i-tilde */
+.titulo-tecnologias::before {
+    content: none !important;
+}
+.titulo-tecnologias:not(.i-tilde)::after {
+    content: none;
+}
+
+/* Texto del título (opcional, por si quieres aplicar estilos solo al texto) */
+.titulo-text {
+    display: inline-block;
+}
+
+/* Barras laterales independientes */
+.titulo-box {
+    display: block;
+    height: 2px;
+    flex: 1 1 120px;     /* se expande con base mínima */
+    max-width: 600px;    /* limita largo máximo */
+    filter: drop-shadow(0 0 6px rgba(10, 255, 84, 0.35));
+}
+ 
+
+/* Asegurar que la i-tilde pinte su cajita */
+.i-tilde {
+    position: relative;
+    background: transparent;
+    pointer-events: none;
+}
+.i-tilde::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 4px;
+    background-color: var(--blanco);
+    top: 2px;
+    left: 57.6%;
+    transform: translateX(-50%) rotate(-10deg); 
+    z-index: 10;
+    opacity: 0.98;
+}
+

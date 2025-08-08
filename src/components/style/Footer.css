@@ -1,0 +1,56 @@
+/* Estilos para los iconos de redes sociales */
+.social-icon {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+}
+
+.social-icon img {
+    filter: brightness(0) invert(1); /* Hace los SVG blancos */
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    background-color: rgba(236, 237, 231, 0.1); /* Usando --blanco con transparencia */
+}
+
+.social-icon:hover img {
+    filter: none; /* Restaura el color original en hover */
+    background-color: var(--blanco);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+/* Tamaño de texto responsive para el footer */
+.footer-text {
+    font-size: 0.875rem; /* fs-6 equivalente - móviles */
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+/* Tablet y desktop - tamaño más grande */
+@media (min-width: 768px) {
+    .footer-text {
+        font-size: 1.25rem; /* fs-5 equivalente - desktop */
+    }
+}
+
+/* Responsivo para iconos */
+@media (max-width: 768px) {
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-icon img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}

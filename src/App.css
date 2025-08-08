@@ -1,0 +1,9 @@
+.bg-verde {
+    background-color: var(--verde);
+    color: var(--blanco);
+}
+
+.bg-blanco {
+    background-color: var(--blanco);
+    color: var(--negro);
+}
