@@ -7,6 +7,7 @@
 
 /* Estilos para el componente Body */
 .body-container-dark {
+    margin-top: 40px;
     background-image: url('../../assets/img/code-dark.webp');
     background-size: cover;
     background-position: center;
@@ -14,6 +15,7 @@
     width: 100%;
     background-attachment: fixed;
     padding: 2rem 0; /* Espaciado vertical */
+    padding-top: 80px; /* Compensar altura del navbar fijo */
     /* Removido min-height: 100vh para que se ajuste al contenido */
 }
 .body-container {
@@ -24,6 +26,7 @@
     width: 100%;
     background-attachment: fixed;
     padding: 2rem 0; /* Espaciado vertical */
+    padding-top: 80px; /* Compensar altura del navbar fijo */
     /* Removido min-height: 100vh para que se ajuste al contenido */
 }
 

@@ -477,6 +477,7 @@ align-items: center;
     font-size: 16px;
     color: var(--blanco);
     font-weight: bold;
+    margin-bottom: 0%;
 }
 
 .window-controls {
@@ -520,8 +521,8 @@ align-items: center;
     width: 100px;
     height: 100px;
     background-color: var(--blanco);
-    border: 2px solid var(--verde);
-    border-radius: 15px;
+    border: 1px solid var(--verde);
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -529,17 +530,136 @@ align-items: center;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.img-tec{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* mantiene proporción sin deformar */
+    display: block;
+}
 
 .caja-tecnologia:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(6, 68, 40, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     background-color: #f0f0f0;
 }
 
-.titulo-tecnologias {font-family: 'Furore', sans-serif;
+/* Reforzar hover verde para las cajas con boton-cuadrado (más específico y después) */
+.tecnologias-container .caja-tecnologia.boton-cuadrado:hover {
+    box-shadow: 0 20px 27px rgba(66, 255, 142, 0.45),
+                inset 0 2px 0 rgba(255, 255, 255, 0.35);
+    border-color: #2ecc71;
+    transform: translateY(-6px);
+    background: linear-gradient(145deg, #42ff8e, #2ecc71); /* sobreescribe el bg gris */
+}
+
+/* Sombra verde para las cajas de tecnologías */
+.tecnologias-container .caja-tecnologia.boton-cuadrado {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 8px 6px 22px; /* espacio para el texto inferior */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(66, 255, 142, 0.25),
+              inset 0 2px 0 rgba(255, 255, 255, 0.25);
+  border-color: #2ecc71;
+}
+
+/* Imagen de la tecnología */
+.tecnologias-container .caja-tecnologia.boton-cuadrado .img-tec {
+  /* quitamos restricciones que generaban conflicto */
+  /* max-width: 60%;
+     max-height: 60%; */
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  position: relative;
+  z-index: 1; /* debajo del texto */
+  transform: translateY(4px);
+}
+
+/* Texto inferior (oculto inicialmente) */
+.tecnologias-container .caja-tecnologia.boton-cuadrado span {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--negro);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+  z-index: 2; /* encima de la imagen */
+}
+
+/* Hover: imagen sube y texto aparece abajo */
+.tecnologias-container .caja-tecnologia.boton-cuadrado:hover .img-tec {
+  transform: translateY(-5px);
+}
+.tecnologias-container .caja-tecnologia.boton-cuadrado:hover span {
+  opacity: 1;
+}
+
+/* Quitar "<" y "/>" solo en estas cajas */
+.tecnologias-container .caja-tecnologia.boton-cuadrado::before,
+.tecnologias-container .caja-tecnologia.boton-cuadrado::after {
+  content: none !important;
+}
+
+.titulo-tecnologias {
+    font-family: 'Furore', sans-serif;
     font-size: 30px;
     color: var(--blanco);
     text-align: center;
     margin: 0px 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative; /* asegurar contexto para el pseudo-elemento */
+    z-index: 0;
+    letter-spacing: 0.10em;
+}
+
+/* Anular pseudo-líneas previas sin bloquear i-tilde */
+.titulo-tecnologias::before {
+    content: none !important;
+}
+.titulo-tecnologias:not(.i-tilde)::after {
+    content: none;
+}
+
+/* Texto del título (opcional, por si quieres aplicar estilos solo al texto) */
+.titulo-text {
+    display: inline-block;
+}
+
+/* Barras laterales independientes */
+.titulo-box {
+    display: block;
+    height: 2px;
+    flex: 1 1 120px;     /* se expande con base mínima */
+    max-width: 600px;    /* limita largo máximo */
+    filter: drop-shadow(0 0 6px rgba(10, 255, 84, 0.35));
+}
+ 
+
+/* Asegurar que la i-tilde pinte su cajita */
+.i-tilde {
+    position: relative;
+    background: transparent;
+    pointer-events: none;
+}
+.i-tilde::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 4px;
+    background-color: var(--blanco);
+    top: 2px;
+    left: 57.6%;
+    transform: translateX(-50%) rotate(-10deg); 
+    z-index: 10;
+    opacity: 0.98;
 }
 
