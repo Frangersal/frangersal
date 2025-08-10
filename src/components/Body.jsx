@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import foto from '../assets/img/Perfil Frangersal 2025.jpg'
 
-import apachelogo from '../assets/img/tec/apache.webp'
+import apachelogo from '../assets/img/tec/apacheb.webp'
 import blenderlogo from '../assets/img/tec/blender.webp'
 import bootstraplogo from '../assets/img/tec/bootstrap.webp'
 import canvaslogo from '../assets/img/tec/canvas.webp'
@@ -14,7 +14,7 @@ import javalogo from '../assets/img/tec/java.webp'
 import jslogo from '../assets/img/tec/js.webp'
 import laravellogo from '../assets/img/tec/laravel.webp'
 import linuxlogo from '../assets/img/tec/linux.webp'
-import mysqllogo from '../assets/img/tec/mysql.webp'
+import mysqllogo from '../assets/img/tec/mysqlb.webp'
 import nodelogo from '../assets/img/tec/node.webp'
 import npmlogo from '../assets/img/tec/npm.webp'
 import photopealogo from '../assets/img/tec/photopea.webp'
@@ -23,6 +23,16 @@ import postmanlogo from '../assets/img/tec/postman.webp'
 import springbootlogo from '../assets/img/tec/springboot.webp'
 import trellologo from '../assets/img/tec/trello.webp'
 import twcsslogo from '../assets/img/tec/twcss.webp'
+
+import calcpc from '../assets/img/proyectos-ss/calcpc.webp'
+import guitarla from '../assets/img/proyectos-ss/guitarla.webp'
+import listacompras from '../assets/img/proyectos-ss/listacompras.webp'
+import micheladastoys from '../assets/img/proyectos-ss/micheladastoys.webp'
+import mycalculator from '../assets/img/proyectos-ss/mycalculator.webp'
+import mytodo from '../assets/img/proyectos-ss/mytodo.webp'
+import royaltyflights from '../assets/img/proyectos-ss/royaltyflights.webp'
+import tecnmtutorias from '../assets/img/proyectos-ss/tecnmtutorias.webp'
+import viandamarket from '../assets/img/proyectos-ss/viandamarket.webp'
 
 import whatsappIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/brands/square-whatsapp.svg'
 import linkedinIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/brands/linkedin.svg'
@@ -44,70 +54,76 @@ const Body = () => {
 
     return (
         <>
-            <div className=  "body-container-dark">
+            <div className="body-container-dark">
                 <div className="container-limitado">
-                    <div className="row seccion-f">
-                        <div className="row seccion-verde">
-                            <div className="window-header">
-                                <h1 className="window-title">Perfil y Contacto</h1>
-                                <div className="window-controls">
-                                    <button className="window-btn close"></button>
-                                    <button className="window-btn minimize"></button>
-                                    <button className="window-btn maximize"></button>
-                                </div>
+                    <div className="card text-bg-dark  " >
+                        <div className="card-header">
+                            <h1 className="window-title">Perfil y Contacto</h1>
+                            <div className="window-controls">
+                                <button className="window-btn close"></button>
+                                <button className="window-btn minimize"></button>
+                                <button className="window-btn maximize"></button>
                             </div>
-                            <div className="contenido-ventana">
-                                <div className="row">
-                                    <div className="col-xs-12 col-sm-12 col-md-5 col-lg-6 seccion-f animar-sec">
-                                        <div className="cara animar-pop">
-                                            <img className="img-perfil" src={foto} alt="Mi Foto" />
-                                            <h1 className="nombre">Francisco Gerardo Salinas Mendoza</h1>
-                                            <h2 className="puesto">Web Developer Jr.</h2>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div className="card-body  ">
 
-                                    <div className="col-xs-12 col-sm-12 col-md-7  col-lg-6 seccion-f animar-sec">
-                                        <div className="descripcion animar-pop">
-                                            <div className="caja-fgsm">
-                                                <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>&lt;</span>
-                                                <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>F</span>
-                                                <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>G</span>
-                                                <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>S</span>
-                                                <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>M</span>
-                                                <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>/</span>
-                                                <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>&gt;</span>
+                            <div className="row seccion-f">
+                                <div className="row ">
+                                    <div className="contenido-ventana">
+                                        <div className="row">
+                                            <div className="col-xs-12 col-sm-12 col-md-5 col-lg-6 seccion-f animar-sec">
+                                                <div className="cara animar-pop">
+                                                    <img className="img-perfil" src={foto} alt="Mi Foto" />
+                                                    <h1 className="nombre">Francisco Gerardo Salinas Mendoza</h1>
+                                                    <h2 className="puesto">Frontend Web <br /> Developer Jr.</h2>
+                                                </div>
                                             </div>
-                                            <p className="perfil-pro">
-                                                Soy un desarrollador Full Stack Java Jr. y Web
-                                                Developer Jr. con habilidades en Java, PHP, MySQL,
-                                                Spring, Laravel y Bootstrap. Me apasiona el desarrollo
-                                                web sobre todo la parte del Backend, estoy siempre
-                                                buscando mejorar y estar actualizado en las últimas
-                                                tecnologías. Estoy emocionado por enfrentar nuevos
-                                                desafíos y ser parte de su equipo.
-                                            </p>
-                                            <div className="descripcion_boton">
-                                                <a href="https://wa.me/527443492221" target="_blank" rel="noopener noreferrer" className="boton-cuadrado center">
-                                                    <img className="boton-icono" src={whatsappIcon} alt="WhatsApp" />
-                                                </a>
-                                                <a href="https://www.linkedin.com/in/frangersal/" target="_blank" rel="noopener noreferrer" className="boton-cuadrado center">
-                                                    <img className="boton-icono" src={linkedinIcon} alt="LinkedIn" />
-                                                </a>
-                                                <a href="https://github.com/Frangersal" target="_blank" rel="noopener noreferrer" className="boton-cuadrado center">
-                                                    <img className="boton-icono" src={githubIcon} alt="GitHub" />
-                                                </a>
-                                                <a href="mailto:frangersal@outlook.com" target="_blank" rel="noopener noreferrer" className="boton-cuadrado center">
-                                                    <img className="boton-icono" src={envelopeIcon} alt="Email" />
-                                                </a>
+
+                                            <div className="col-xs-12 col-sm-12 col-md-7  col-lg-6 seccion-f animar-sec">
+                                                <div className="descripcion animar-pop">
+                                                    <div className="caja-fgsm">
+                                                        <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>&lt;</span>
+                                                        <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>F</span>
+                                                        <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>G</span>
+                                                        <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>S</span>
+                                                        <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>M</span>
+                                                        <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>/</span>
+                                                        <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>&gt;</span>
+                                                    </div>
+                                                    <p className="perfil-pro">
+                                                        Soy un desarrollador Full Stack Java Jr. y Web
+                                                        Developer Jr. con habilidades en Java, PHP, MySQL,
+                                                        Spring, Laravel y Bootstrap. Me apasiona el desarrollo
+                                                        web sobre todo la parte del Backend, estoy siempre
+                                                        buscando mejorar y estar actualizado en las últimas
+                                                        tecnologías. Estoy emocionado por enfrentar nuevos
+                                                        desafíos y ser parte de su equipo.
+                                                    </p>
+                                                    <div className="descripcion_boton">
+                                                        <a href="https://wa.me/527443492221" target="_blank" rel="noopener noreferrer" className="boton-cuadrado center">
+                                                            <img className="boton-icono" src={whatsappIcon} alt="WhatsApp" />
+                                                        </a>
+                                                        <a href="https://www.linkedin.com/in/frangersal/" target="_blank" rel="noopener noreferrer" className="boton-cuadrado center">
+                                                            <img className="boton-icono" src={linkedinIcon} alt="LinkedIn" />
+                                                        </a>
+                                                        <a href="https://github.com/Frangersal" target="_blank" rel="noopener noreferrer" className="boton-cuadrado center">
+                                                            <img className="boton-icono" src={githubIcon} alt="GitHub" />
+                                                        </a>
+                                                        <a href="mailto:frangersal@outlook.com" target="_blank" rel="noopener noreferrer" className="boton-cuadrado center">
+                                                            <img className="boton-icono" src={envelopeIcon} alt="Email" />
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            {/* <div className="col-xs-12 col-sm-12 col-md-12 animar-sec">
+                                                <p className="pie-frangersal animar-pop mt-4">&lt;FGSM/&gt;</p>
+                                            </div> */}
                                         </div>
-                                    </div>
-                                    <div className="col-xs-12 col-sm-12 col-md-12 animar-sec">
-                                        <p className="pie-frangersal animar-pop mt-4">&lt;FGSM/&gt;</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="card-footer ">&lt; @Frangersal /&gt;</div>
                     </div>
                 </div>
 
@@ -115,7 +131,9 @@ const Body = () => {
                 <div className="container-limitado">
                     <div className="row seccion-f">
                         <div className="col-12">
+                            <hr />
                             <h1 className="titulo-tecnologias i-tilde">Tecnologias</h1>
+                            <p className="monologo-tecnologias">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam officiis a delectus, possimus exercitationem est quos numquam! Laudantium minus magni deserunt nisi a quis repellendus tempora non, ipsa temporibus placeat.</p>
                             <div className="tecnologias-container">
                                 <div className="caja-tecnologia boton-cuadrado">
                                     <img className="img-tec" src={htmllogo} alt="html logo" />
@@ -127,7 +145,7 @@ const Body = () => {
                                 </div>
                                 <div className="caja-tecnologia boton-cuadrado">
                                     <img className="img-tec" src={jslogo} alt="html logo" />
-                                    <span>JS</span>
+                                    <span>JavaScript</span>
                                 </div>
                                 <div className="caja-tecnologia boton-cuadrado">
                                     <img className="img-tec" src={javalogo} alt="html logo" />
@@ -183,7 +201,7 @@ const Body = () => {
                                 </div>
                                 <div className="caja-tecnologia boton-cuadrado">
                                     <img className="img-tec" src={linuxlogo} alt="html logo" />
-                                    <span>Linux</span>
+                                    <span>Linux/WSL</span>
                                 </div>
                                 <div className="caja-tecnologia boton-cuadrado">
                                     <img className="img-tec" src={figmalogo} alt="html logo" />
@@ -208,12 +226,143 @@ const Body = () => {
                             </div>
                         </div>
 
-                        <div className="col-xs-12 col-sm-12 col-md-12 animar-sec">
+                        {/* <div className="col-xs-12 col-sm-12 col-md-12 animar-sec">
                             <p className="pie-frangersal animar-pop mt-4">&lt;FGSM/&gt;</p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
+
+                <div className="container-limitado">
+                    <div className="row seccion-f">
+                        <div className="col-12">
+                            <hr />
+                            <h1 className="titulo-tecnologias">Proyectos</h1>
+
+                            <p className="monologo-tecnologias">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam officiis a delectus, possimus exercitationem est quos numquam! Laudantium minus magni deserunt nisi a quis repellendus tempora non, ipsa temporibus placeat.</p>
+                            <div className="tecnologias-container">
+
+
+                                <div className="row row-cols-1 row-cols-md-3 g-4">
+                                    <div className="col">
+                                        <div className="card">
+                                            <h4 className="card-header">
+                                                Vianda Market
+                                            </h4>
+                                            <img src={viandamarket} className="card-img-top " alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <div class="card-footer ">&lt; @Frangersal /&gt;</div>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="card">
+                                            <h4 className="card-header">
+                                                TecNM Tutorias
+                                            </h4>
+                                            <img src={tecnmtutorias} className="card-img-top" alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <div class="card-footer ">&lt; @Frangersal /&gt;</div>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="card">
+                                            <h4 className="card-header">
+                                                Royal Flights
+                                            </h4>
+                                            <img src={royaltyflights} className="card-img-top" alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                            </div>
+                                            <div class="card-footer ">&lt; @Frangersal /&gt;</div>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="card">
+                                            <h4 className="card-header">
+                                                Micheladas Toys
+                                            </h4>
+                                            <img src={micheladastoys} className="card-img-top" alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <div class="card-footer ">&lt; @Frangersal /&gt;</div>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="card">
+                                            <h4 className="card-header">
+                                                GuitarLA
+                                            </h4>
+                                            <img src={guitarla} className="card-img-top" alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <div class="card-footer ">&lt; @Frangersal /&gt;</div>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="card">
+                                            <h4 className="card-header">
+                                                Propinas y Consumo
+                                            </h4>
+                                            <img src={calcpc} className="card-img-top" alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <div class="card-footer ">&lt; @Frangersal /&gt;</div>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="card">
+                                            <h4 className="card-header">
+                                                Lista de compras
+                                            </h4>
+                                            <img src={listacompras} className="card-img-top" alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <div class="card-footer ">&lt; @Frangersal /&gt;</div>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="card">
+                                            <h4 className="card-header">
+                                                To do list
+                                            </h4>
+                                            <img src={mytodo} className="card-img-top" alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                        <div class="card-footer ">&lt; @Frangersal /&gt;</div>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="card">
+                                            <h4 className="card-header">
+                                                Calculadora
+                                            </h4>
+                                            <img src={mycalculator} className="card-img-top" alt="..." />
+                                            <div className="card-body">
+                                                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <div class="card-footer ">&lt; @Frangersal /&gt;</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        {/* <div className="col-xs-12 col-sm-12 col-md-12 animar-sec">
+                            <p className="pie-frangersal animar-pop mt-4">&lt;FGSM/&gt;</p>
+                        </div> */}
+                    </div>
+                </div>
 
             </div>
         </>

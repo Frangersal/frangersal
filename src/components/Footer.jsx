@@ -35,7 +35,7 @@ const Footer = () => {
                         {/* Mensaje de copyright */}
                         <div>
                             <p className="mb-0 footer-text">
-                                &lt;Frangersal year=&#123;{currentYear}&#125; country=&#123;México&#125;/&gt;
+                                &lt;Frangersal year=&#123;{currentYear}&#125; country=&#123;México&#125;/&gt; ©
                             </p>
                         </div>
                     </div>
