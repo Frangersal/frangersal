@@ -46,3 +46,17 @@
     filter: brightness(0) invert(0);
     transition: all 0.3s ease;
 }
+
+/* Modo oscuro para badges de Bootstrap */
+body.dark-mode .badge.bg-success-subtle,
+body.dark-mode .badge.bg-primary-subtle,
+body.dark-mode .badge.bg-secondary-subtle,
+body.dark-mode .badge.bg-info-subtle,
+body.dark-mode .badge.bg-warning-subtle,
+body.dark-mode .badge.bg-danger-subtle,
+body.dark-mode .badge.bg-light,
+body.dark-mode .badge.bg-light-subtle {
+  background-color: #005a002f !important;
+  color: var(--blanco) !important;
+  border-color: var(--verde) !important;
+}

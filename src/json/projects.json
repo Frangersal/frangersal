@@ -1,0 +1,84 @@
+
+
+[
+    {
+        "title": "Portafolio",
+        "img": "portafolio.webp",
+        "description": "Portafolio personal realizado con React.",
+        "urlDemo": "https://frangersal.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "tools": ["React.Js","Vite","JavaScript","Bootstrap"]
+    },
+    {
+        "title": "Vianda Market",
+        "img": "viandamarket.webp",
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "urlDemo": "https://frangersal.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "tools": ["SpringBoot","Java","MySQL","JavaScript","Bootstrap"]
+    },
+    {
+        "title": "TecNM Tutorias",
+        "img": "tecnmtutorias.webp",
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "urlDemo": "https://frangersal.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "tools": ["Laravel","PHP","MySQL","Bootstrap","Apache"]
+    },
+    {
+        "title": "Royal Flights",
+        "img": "royaltyflights.webp",
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "urlDemo": "https://frangersal.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "tools": ["SpringBoot","Java","MySQL","JavaScript","Bootstrap"]
+    },
+    {
+        "title": "Micheladas Toys",
+        "img": "micheladastoys.webp",
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "urlDemo": "https://frangersal.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "tools": ["Bootstrap","HTML","CSS"]
+    },
+    {
+        "title": "GuitarLA",
+        "img": "guitarla.webp",
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "urlDemo": "https://frangersal.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
+    },
+    {
+        "title": "Propinas y Consumo",
+        "img": "calcpc.webp",
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "urlDemo": "https://frangersal.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
+    },
+    {
+        "title": "Lista de compras",
+        "img": "listacompras.webp",
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "urlDemo": "https://frangersal.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "tools": ["JavaScript","Bootstrap"]
+    },
+    {
+        "title": "To do list",
+        "img": "mytodo.webp",
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "urlDemo": "https://frangersal.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
+    },
+    {
+        "title": "Calculadora",
+        "img": "mycalculator.webp",
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "urlDemo": "https://frangersal.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
+    }
+]
