@@ -1,0 +1,146 @@
+[
+    {
+        "title": "HTML",
+        "img": "html.webp",
+        "description": "HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Define la estructura básica de los sitios web mediante etiquetas y elementos.",
+        "urlDocu": "https://developer.mozilla.org/es/docs/Web/HTML"
+    },
+    {
+        "title": "CSS",
+        "img": "css.webp",
+        "description": "CSS (Cascading Style Sheets) es el lenguaje utilizado para describir la presentación y el diseño de las páginas web escritas en HTML.",
+        "urlDocu": "https://developer.mozilla.org/es/docs/Web/CSS"
+    },
+    {
+        "title": "JavaScript",
+        "img": "js.webp",
+        "description": "JavaScript es un lenguaje de programación que permite agregar interactividad, lógica y dinamismo a las páginas web en el navegador.",
+        "urlDocu": "https://developer.mozilla.org/es/docs/Web/JavaScript"
+    },
+    {
+        "title": "Java",
+        "img": "java.webp",
+        "description": "Java es un lenguaje de programación orientado a objetos ampliamente utilizado para el desarrollo de aplicaciones empresariales, móviles y web.",
+        "urlDocu": "https://docs.oracle.com/javase/8/docs/"
+    },
+    {
+        "title": "PHP",
+        "img": "php.webp",
+        "description": "PHP es un lenguaje de programación de código abierto especialmente adecuado para el desarrollo web y que puede ser incrustado en HTML.",
+        "urlDocu": "https://www.php.net/manual/es/"
+    },
+    {
+        "title": "SpringBoot",
+        "img": "springboot.webp",
+        "description": "Spring Boot es un framework de Java que simplifica la creación de aplicaciones web y microservicios con configuración mínima.",
+        "urlDocu": "https://spring.io/projects/spring-boot"
+    },
+    {
+        "title": "Laravel",
+        "img": "laravel.webp",
+        "description": "Laravel es un framework de PHP para el desarrollo de aplicaciones web con una sintaxis elegante y herramientas modernas.",
+        "urlDocu": "https://laravel.com/docs"
+    },
+    {
+        "title": "Vite",
+        "img": "vite.webp",
+        "description": "Vite es un build tool moderno y rápido para proyectos frontend, especialmente para aplicaciones con frameworks como React y Vue.",
+        "urlDocu": "https://vitejs.dev/"
+    },
+    {
+        "title": "MySQL",
+        "img": "mysql.webp",
+        "description": "MySQL es un sistema de gestión de bases de datos relacional muy popular y ampliamente utilizado en aplicaciones web.",
+        "urlDocu": "https://dev.mysql.com/doc/"
+    },
+    {
+        "title": "Git",
+        "img": "git.webp",
+        "description": "Git es un sistema de control de versiones distribuido que permite gestionar y registrar los cambios en el código fuente de proyectos.",
+        "urlDocu": "https://git-scm.com/doc"
+    },
+    {
+        "title": "GitHub",
+        "img": "github.webp",
+        "description": "GitHub es una plataforma de alojamiento de código fuente y control de versiones que utiliza Git y facilita la colaboración entre desarrolladores.",
+        "urlDocu": "https://docs.github.com/es"
+    },
+    {
+        "title": "Bootstrap",
+        "img": "bootstrap.webp",
+        "description": "Bootstrap es un framework CSS que facilita el diseño de sitios web responsivos y modernos mediante componentes y utilidades listas para usar.",
+        "urlDocu": "https://getbootstrap.com/docs/"
+    },
+    {
+        "title": "Tailwind",
+        "img": "twcss.webp",
+        "description": "Tailwind CSS es un framework de utilidades para CSS que permite crear interfaces personalizadas de manera rápida y eficiente.",
+        "urlDocu": "https://tailwindcss.com/docs"
+    },
+    {
+        "title": "Apache",
+        "img": "apache.webp",
+        "description": "Apache HTTP Server es un servidor web de código abierto que permite alojar y servir sitios web en Internet.",
+        "urlDocu": "https://httpd.apache.org/docs/"
+    },
+    {
+        "title": "Postman",
+        "img": "postman.webp",
+        "description": "Postman es una herramienta para probar, desarrollar y documentar APIs de manera sencilla y visual.",
+        "urlDocu": "https://learning.postman.com/docs/"
+    },
+    {
+        "title": "NPM",
+        "img": "npm.webp",
+        "description": "NPM (Node Package Manager) es el gestor de paquetes por defecto para Node.js, utilizado para instalar y gestionar dependencias de proyectos JavaScript.",
+        "urlDocu": "https://docs.npmjs.com/"
+    },
+    {
+        "title": "Node.js",
+        "img": "node.webp",
+        "description": "Node.js es un entorno de ejecución para JavaScript en el servidor, ideal para crear aplicaciones escalables y rápidas.",
+        "urlDocu": "https://nodejs.org/es/docs/"
+    },
+    {
+        "title": "Linux/WSL",
+        "img": "linux.webp",
+        "description": "Linux es un sistema operativo de código abierto ampliamente usado en servidores y desarrollo. WSL permite ejecutar Linux en Windows.",
+        "urlDocu": "https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10"
+    },
+    {
+        "title": "Figma",
+        "img": "figma.webp",
+        "description": "Figma es una herramienta de diseño de interfaces y prototipos colaborativa basada en la web.",
+        "urlDocu": "https://help.figma.com/hc/es"
+    },
+    {
+        "title": "Blender",
+        "img": "blender.webp",
+        "description": "Blender es un software de código abierto para modelado, animación, simulación y renderizado 3D.",
+        "urlDocu": "https://docs.blender.org/manual/es/latest/"
+    },
+    {
+        "title": "Photopea",
+        "img": "photopea.webp",
+        "description": "Photopea es un editor de imágenes en línea compatible con archivos PSD, XCF, Sketch, XD y CDR.",
+        "urlDocu": "https://www.photopea.com/learn/"
+    },
+    {
+        "title": "Canvas",
+        "img": "canvas.webp",
+        "description": "Canvas es un elemento de HTML5 que permite dibujar gráficos, animaciones y otros elementos visuales mediante JavaScript.",
+        "urlDocu": "https://developer.mozilla.org/es/docs/Web/API/Canvas_API"
+    },
+    {
+        "title": "Trello",
+        "img": "trello.webp",
+        "description": "Trello es una aplicación web para la gestión de proyectos basada en tableros y tarjetas, ideal para equipos ágiles.",
+        "urlDocu": "https://trello.com/guide"
+    },
+    {
+        "title": "JSON",
+        "img": "json.webp",
+        "description": "JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos, fácil de leer y escribir para humanos y fácil de parsear y generar para las máquinas. Es ampliamente utilizado para transmitir datos entre un servidor y aplicaciones web.",
+        "urlDocu": "https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/JSON"
+    }
+]
