@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '../assets/img/FGSM-Primary.webp'
 import globeIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/solid/globe.svg'
+
 import moonIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/solid/moon.svg'
+import sunIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/solid/sun.svg'
+
 import './style/Header.css'
 
-const Header = () => {
+const Header = ({ darkMode, setDarkMode }) => {
+    const [hover, setHover] = useState(false);
+
+    // Actualiza el modo y guarda en localStorage
+    const handleToggle = () => {
+        setDarkMode(dm => {
+            const newMode = !dm;
+            localStorage.setItem('fgsm-dark-mode', newMode);
+            return newMode;
+        });
+    };
+
     return (
-        <>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-verde fixed-top">
+        <> 
+            <nav className={`navbar navbar-expand-lg navbar-dark bg-verde fixed-top`}>
                 <div className="container">
 
                     <a className="navbar-brand" href="#">
@@ -15,8 +29,8 @@ const Header = () => {
                             className="d-inline-block align-text-top" />
                     </a>
                     
-                    {/* Botones de idioma y modo oscuro 
-                    <div className="d-flex align-items-center gap-2 order-lg-last">*/}
+                    {/* Botones de idioma y modo oscuro */}
+                    <div className="d-flex align-items-center gap-2 order-lg-last">
                         {/* Botón de idioma 
                         
                         <button className="btn btn-outline-light btn-sm d-flex align-items-center justify-content-center gap-1 header-button" type="button">
@@ -24,11 +38,28 @@ const Header = () => {
                             <span className="language-text">ES</span>
                         </button>*/}
                         
-                        {/* Botón de modo oscuro 
-                        <button className="btn btn-outline-light btn-sm d-flex align-items-center justify-content-center header-button" type="button">
-                            <img src={moonIcon} alt="Dark Mode" width="16" height="16" className="header-icon" />
+                        {/* Botón de modo oscuro */}
+                        <button
+                            className="btn btn-outline-light btn-sm d-flex align-items-center justify-content-center header-button"
+                            type="button"
+                            onClick={handleToggle}
+                            aria-label="Toggle dark mode"
+                            onMouseEnter={() => setHover(true)}
+                            onMouseLeave={() => setHover(false)}
+                        >
+                            <img
+                                src={darkMode ? sunIcon : moonIcon}
+                                alt={darkMode ? "Light Mode" : "Dark Mode"}
+                                width="16"
+                                height="16"
+                                className={
+                                    darkMode && hover
+                                        ? "header-icon-dark"
+                                        : "header-icon"
+                                }
+                            />
                         </button>
-                    </div>*/}
+                    </div>
                     
                     <button className="navbar-toggler fs-4 p-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
