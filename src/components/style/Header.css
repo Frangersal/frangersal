@@ -9,42 +9,40 @@
     border-radius: 6px !important;
 }
 
-/* Estilos para los iconos del header */
-.header-icon {
-    filter: brightness(0) invert(1); /* Hace los SVG usar el color --blanco */
-    transition: all 0.3s ease;
-}
+
 
 /* Texto del botón de idioma con mismo estilo que nav-links */
 .language-text {
     font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
-    font-size: 1.25rem; /* fs-5 */
+    font-size: 1.25rem;
+    /* fs-5 */
     font-weight: bold;
 }
 
 /* Botones de idioma y modo oscuro con tamaño fijo */
 .header-button {
-    width: 60px !important;
-    height: 32px !important;
+    width: 60px;
+    height: 32px;
     min-width: 60px;
-    border-color: var(--blanco) !important;
-    color: var(--blanco) !important;
+    border-color: #fff !important;
+    color: var(--blanco);
 }
 
 .header-button:hover {
-    background-color: var(--blanco) !important;
-    color: var(--verde) !important;
+    background-color: var(--blanco);
+    color: var(--verde);
+    border-color: #fff !important;
 }
 
-.header-button:hover .header-icon {
-    filter: brightness(0) saturate(100%) invert(15%) sepia(19%) saturate(3471%) hue-rotate(152deg) brightness(90%) contrast(98%); /* Convierte a color verde */
-}as líneas del navbar-toggler más gruesas */
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+
+/* Estilos para los iconos del header */
+.header-icon {
+    filter: brightness(0) invert(1);
+    /* Hace los SVG usar el color --blanco */
+    transition: all 0.3s ease;
 }
 
-/* Hacer el borde del navbar-toggler más grueso */
-.navbar-toggler {
-    border: 2px solid #ECEDE7!important;
-    border-radius: 6px !important;
+.header-icon-dark {
+    filter: brightness(0) invert(0);
+    transition: all 0.3s ease;
 }

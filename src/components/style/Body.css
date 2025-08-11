@@ -14,19 +14,25 @@
     background-repeat: no-repeat;
     width: 100%;
     background-attachment: fixed;
-    padding: 2rem 0; /* Espaciado vertical */
-    padding-top: 80px; /* Compensar altura del navbar fijo */
+    padding: 2rem 0;
+    /* Espaciado vertical */
+    padding-top: 80px;
+    /* Compensar altura del navbar fijo */
     /* Removido min-height: 100vh para que se ajuste al contenido */
 }
+
 .body-container {
+    margin-top: 40px;
     background-image: url('../../assets/img/code.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     background-attachment: fixed;
-    padding: 2rem 0; /* Espaciado vertical */
-    padding-top: 80px; /* Compensar altura del navbar fijo */
+    padding: 2rem 0;
+    /* Espaciado vertical */
+    padding-top: 80px;
+    /* Compensar altura del navbar fijo */
     /* Removido min-height: 100vh para que se ajuste al contenido */
 }
 
@@ -42,12 +48,14 @@
 }
 
 .fuente-frangersal {
-    font-family: inherit; /* Heredará la misma fuente que pie-frangersal */
+    font-family: inherit;
+    /* Heredará la misma fuente que pie-frangersal */
 }
 
 /* O si pie-frangersal tiene una fuente específica, usar la misma */
 .fuente-frangersal {
-    font-family: var(--fuente-frangersal, monospace); /* Ajustar según la fuente real del footer */
+    font-family: var(--fuente-frangersal, monospace);
+    /* Ajustar según la fuente real del footer */
 }
 
 .nombre-roboto {
@@ -55,7 +63,7 @@
 }
 
 .caja-fgsm {
-    background-color: var(--blanco);
+    background-color: #ECEDE7;
     color: var(--negro);
     font-family: 'Furore', sans-serif;
     width: 100%;
@@ -66,7 +74,8 @@
     align-items: center;
     font-size: 24px;
     border-radius: 50;
-    border: var(--verde) 1px solid;
+    border: var(--verde) 9px solid;
+    /* outline: 5px solid var(--verde); */
 }
 
 .letra {
@@ -74,20 +83,39 @@
     font-family: 'Furore', sans-serif;
     font-size: 50px;
     cursor: default;
+    margin-bottom: 6px;
 }
 
 @keyframes ola-suave {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @keyframes ola-subida {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-8px); }
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-8px);
+    }
 }
 
 @keyframes ola-bajada {
-    0% { transform: translateY(-8px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
