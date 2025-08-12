@@ -2,10 +2,10 @@ import React, { useRef, useState, useEffect } from 'react'
 
 import foto from '../assets/img/foto/Perfil Frangersal 2025.webp'
 
-import whatsappIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/brands/square-whatsapp.svg'
-import linkedinIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/brands/linkedin.svg'
-import sgithubIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/brands/square-github.svg'
-import envelopeIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/solid/square-envelope.svg'
+import whatsappIcon from '../assets/icons/square-whatsapp.svg'
+import linkedinIcon from '../assets/icons/linkedin.svg'
+import sgithubIcon from '../assets/icons/square-github.svg'
+import envelopeIcon from '../assets/icons/square-envelope.svg'
 
 
 import Header from './Header'
@@ -42,7 +42,6 @@ const Body = () => {
         // Aplicar animación de subida
         e.target.style.animation = 'ola-subida 0.45s ease-out forwards';
     };
-
     const handleLetterLeave = (e) => {
         // Aplicar animación de bajada
         e.target.style.animation = 'ola-bajada 0.45s ease-out forwards';
@@ -66,15 +65,10 @@ const Body = () => {
         <>
             <Header darkMode={darkMode} setDarkMode={setDarkMode} />
             <div className={darkMode ? "body-container-dark" : "body-container"}>
-                <div className="container-limitado">
+                <div className="container-limitado" id="perfil-section">
                     <div className="card shadow-green-off text-bg-dark  " >
                         <div className="card-header ">
                             <h1 className="window-title">Perfil y Contacto</h1>
-                            {/* <div className="window-controls">
-                                <button className="window-btn close"></button>
-                                <button className="window-btn minimize"></button>
-                                <button className="window-btn maximize"></button>
-                            </div> */}
                         </div>
                         <div className={darkMode ? "card-body card-body-dark" : "card-body"}>
                             <div className="row seccion-f">
@@ -133,9 +127,39 @@ const Body = () => {
                     </div>
                 </div>
 
-            <Tecnologias  />
-            <Proyectos darkMode={darkMode} />
-            <Certificados darkMode={darkMode}  />
+                <div id="tecnologias-section">
+                    <Tecnologias />
+                </div>
+                <div id="proyectos-section">
+                    <Proyectos darkMode={darkMode} />
+                </div>
+                <div id="certificados-section">
+                    <Certificados darkMode={darkMode} />
+                </div>
+
+                <div className="container-limitado" id="descargas-section">
+                    <div className="row seccion-f">
+                        <div className="col-12">
+                            <hr />
+                            <h1 className="titulo-tecnologias">Descargas</h1>
+                            <p className="monologo-tecnologias">
+                                Puedes descargar mi currículum vitae en formato PDF para conocer más sobre mi experiencia, habilidades y formación profesional. Haz clic en el botón para obtener una copia actualizada de mi CV.
+                            </p>
+                            <div className="tecnologias-container">
+                                <a
+                                    href="/src/assets/pdf/Currículum Vitae Francisco G Salinas.pdf"
+                                    download="Currículum-Francisco-Salinas.pdf"
+                                    className="caja-descarga button-box-descarga shadow-green"
+                                    style={{ textDecoration: 'none', color: 'inherit' }}
+                                >
+                                    <span className={darkMode ? 'text-descargar-dark' : 'text-descargar'}>
+                                        Descargar CV
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
             {showScrollTop && (
@@ -153,5 +177,4 @@ const Body = () => {
         </>
     )
 }
-
 export default Body
