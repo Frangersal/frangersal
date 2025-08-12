@@ -49,7 +49,7 @@
     },
     {
         "title": "MySQL",
-        "img": "mysql.webp",
+        "img": "mysqlb.webp",
         "description": "MySQL es un sistema de gestión de bases de datos relacional muy popular y ampliamente utilizado en aplicaciones web.",
         "urlDocu": "https://dev.mysql.com/doc/"
     },
@@ -79,7 +79,7 @@
     },
     {
         "title": "Apache",
-        "img": "apache.webp",
+        "img": "apacheb.webp",
         "description": "Apache HTTP Server es un servidor web de código abierto que permite alojar y servir sitios web en Internet.",
         "urlDocu": "https://httpd.apache.org/docs/"
     },
@@ -106,6 +106,12 @@
         "img": "linux.webp",
         "description": "Linux es un sistema operativo de código abierto ampliamente usado en servidores y desarrollo. WSL permite ejecutar Linux en Windows.",
         "urlDocu": "https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10"
+    },
+    {
+        "title": "JSON",
+        "img": "json.webp",
+        "description": "JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos, fácil de leer y escribir para humanos y fácil de parsear y generar para las máquinas. Es ampliamente utilizado para transmitir datos entre un servidor y aplicaciones web.",
+        "urlDocu": "https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/JSON"
     },
     {
         "title": "Figma",
@@ -136,11 +142,5 @@
         "img": "trello.webp",
         "description": "Trello es una aplicación web para la gestión de proyectos basada en tableros y tarjetas, ideal para equipos ágiles.",
         "urlDocu": "https://trello.com/guide"
-    },
-    {
-        "title": "JSON",
-        "img": "json.webp",
-        "description": "JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos, fácil de leer y escribir para humanos y fácil de parsear y generar para las máquinas. Es ampliamente utilizado para transmitir datos entre un servidor y aplicaciones web.",
-        "urlDocu": "https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/JSON"
     }
 ]

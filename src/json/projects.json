@@ -1,10 +1,8 @@
-
-
 [
     {
         "title": "Portafolio",
         "img": "portafolio.webp",
-        "description": "Portafolio personal realizado con React.",
+        "description": "Portafolio profesional desarrollado con React y Vite. Presenta proyectos, tecnologías y certificados en una interfaz responsive con modo oscuro, navegación clara y buenas prácticas de UI. ",
         "urlDemo": "https://frangersal.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/frangersal",
         "tools": ["React.Js","Vite","JavaScript","Bootstrap"]
@@ -12,73 +10,73 @@
     {
         "title": "Vianda Market",
         "img": "viandamarket.webp",
-        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "description": "Tienda online de carnes con catálogo, carrito de compras y proceso de pago. Integra un flujo de compra claro y componentes responsivos para una experiencia ágil.",
         "urlDemo": "https://frangersal.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "urlRepo": "https://github.com/Frangersal/GenMx-ViandaMarket-Front",
         "tools": ["SpringBoot","Java","MySQL","JavaScript","Bootstrap"]
     },
     {
         "title": "TecNM Tutorias",
         "img": "tecnmtutorias.webp",
-        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "description": "Plataforma de tutorías académicas con roles de tutor y pupilo. Permite agendar citas, gestionar sesiones y responder encuestas de seguimiento.",
         "urlDemo": "https://frangersal.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "urlRepo": "https://github.com/Frangersal/TecNMTutorias",
         "tools": ["Laravel","PHP","MySQL","Bootstrap","Apache"]
     },
     {
         "title": "Royal Flights",
         "img": "royaltyflights.webp",
-        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "description": "Sitio corporativo para una empresa de avionetas con módulo de reservas de vuelos chárter, consulta de disponibilidad y detalle de rutas.",
         "urlDemo": "https://frangersal.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "urlRepo": "https://github.com/Frangersal/Front-RoyaltyFlights",
         "tools": ["SpringBoot","Java","MySQL","JavaScript","Bootstrap"]
     },
     {
         "title": "Micheladas Toys",
         "img": "micheladastoys.webp",
-        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
+        "description": "Propuesta de maquetado estático y responsivo enfocada en una presentación limpia de productos y secciones informativas.",
         "urlDemo": "https://frangersal.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "urlRepo": "https://github.com/Frangersal/MicheladasToys",
         "tools": ["Bootstrap","HTML","CSS"]
     },
     {
         "title": "GuitarLA",
         "img": "guitarla.webp",
-        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
-        "urlDemo": "https://frangersal.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "description": "Aplicación inicial en React con catálogo de guitarras y carrito de compras. Manejo de estado, componentes reutilizables y UI adaptable.",
+        "urlDemo": "https://hilarious-hotteok-ac72ea.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/guitarla",
         "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
     },
     {
         "title": "Propinas y Consumo",
         "img": "calcpc.webp",
-        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
-        "urlDemo": "https://frangersal.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "description": "Calculadora de consumo en mesa: permite añadir productos, seleccionar el porcentaje de propina y obtener subtotal, propina y total.",
+        "urlDemo": "https://gilded-basbousa-b0ca7f.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/calculadora_propinas",
         "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
     },
     {
         "title": "Lista de compras",
         "img": "listacompras.webp",
-        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
-        "urlDemo": "https://frangersal.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "description": "Aplicación para registrar artículos de compra con nombre y cantidad. Permite gestionar la lista de forma simple y rápida.",
+        "urlDemo": "https://fgsmlistadecompras.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/CH25_ListaCompras-Fran",
         "tools": ["JavaScript","Bootstrap"]
     },
     {
         "title": "To do list",
         "img": "mytodo.webp",
-        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
-        "urlDemo": "https://frangersal.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "description": "Gestor de tareas en React para crear, marcar como completadas y eliminar pendientes con una interfaz clara y reactiva.",
+        "urlDemo": "https://my-todo-fgsm.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/my-to-do-app",
         "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
     },
     {
         "title": "Calculadora",
         "img": "mycalculator.webp",
-        "description": "This is a longer card with supporting text below as a natural lead-in to additional content.",
-        "urlDemo": "https://frangersal.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/frangersal",
+        "description": "Calculadora básica desarrollada en React con operaciones esenciales y diseño minimalista.",
+        "urlDemo": "https://my-calculadora-fgsm.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/my-calculator",
         "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
     }
 ]

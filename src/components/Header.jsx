@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import logo from '../assets/img/FGSM-Primary.webp'
-import globeIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/solid/globe.svg'
-
-import moonIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/solid/moon.svg'
-import sunIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/solid/sun.svg'
-
+import moonIcon from '../assets/icons/moon.svg'
+import sunIcon from '../assets/icons/sun.svg'
 import './style/Header.css'
 
 const Header = ({ darkMode, setDarkMode }) => {
     const [hover, setHover] = useState(false);
+    const [activeSection, setActiveSection] = useState('perfil-section');
 
     // Actualiza el modo y guarda en localStorage
     const handleToggle = () => {
@@ -18,6 +16,54 @@ const Header = ({ darkMode, setDarkMode }) => {
             return newMode;
         });
     };
+
+    // Scroll suave con offset (altura del navbar + margen extra)
+    const getOffset = () => {
+        const nav = document.querySelector('.navbar');
+        const h = nav ? nav.offsetHeight : 0;
+        return h + 16; // margen extra "un poquito más arriba"
+    };
+    const smoothScrollTo = (id) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const y = el.getBoundingClientRect().top + window.pageYOffset - getOffset();
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    };
+    const handleNavClick = (e, id) => {
+        e.preventDefault();
+        smoothScrollTo(id);
+        // opcional: actualizar hash sin salto brusco
+        history.replaceState(null, '', `#${id}`);
+    };
+
+    useEffect(() => {
+        const ids = ['perfil-section','tecnologias-section','proyectos-section','certificados-section','descargas-section'];
+        const onScroll = () => {
+            const scrollPos = window.scrollY + 120; // offset por navbar
+            let current = ids[0];
+            ids.forEach(id => {
+                const el = document.getElementById(id);
+                if (el && el.offsetTop <= scrollPos) current = id;
+            });
+            setActiveSection(current);
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll);
+        window.addEventListener('resize', onScroll);
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('resize', onScroll);
+        };
+    }, []);
+
+    // Ajustar scroll inicial si hay hash en la URL
+    useEffect(() => {
+        if (window.location.hash) {
+            const id = window.location.hash.slice(1);
+            // Esperar al render para calcular posición correcta
+            setTimeout(() => smoothScrollTo(id), 0);
+        }
+    }, []);
 
     return (
         <> 
@@ -68,19 +114,40 @@ const Header = ({ darkMode, setDarkMode }) => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active fs-5 fw-bold" aria-current="page" href="#perfil-section">Perfil</a>
+                                <a
+                                    className={`nav-link fs-5 fw-bold${activeSection==='perfil-section' ? ' active':''}`}
+                                    aria-current="page"
+                                    href="#perfil-section"
+                                    onClick={(e)=>handleNavClick(e,'perfil-section')}
+                                >Perfil</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link fs-5 fw-bold" href="#tecnologias-section">Tecnologías</a>
+                                <a
+                                    className={`nav-link fs-5 fw-bold${activeSection==='tecnologias-section' ? ' active':''}`}
+                                    href="#tecnologias-section"
+                                    onClick={(e)=>handleNavClick(e,'tecnologias-section')}
+                                >Tecnologías</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link fs-5 fw-bold" href="#proyectos-section">Proyectos</a>
+                                <a
+                                    className={`nav-link fs-5 fw-bold${activeSection==='proyectos-section' ? ' active':''}`}
+                                    href="#proyectos-section"
+                                    onClick={(e)=>handleNavClick(e,'proyectos-section')}
+                                >Proyectos</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link fs-5 fw-bold" href="#proyectos-section">Certificados</a>
+                                <a
+                                    className={`nav-link fs-5 fw-bold${activeSection==='certificados-section' ? ' active':''}`}
+                                    href="#certificados-section"
+                                    onClick={(e)=>handleNavClick(e,'certificados-section')}
+                                >Certificados</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link fs-5 fw-bold" href="#descargas-section">Descargas</a>
+                                <a
+                                    className={`nav-link fs-5 fw-bold${activeSection==='descargas-section' ? ' active':''}`}
+                                    href="#descargas-section"
+                                    onClick={(e)=>handleNavClick(e,'descargas-section')}
+                                >Descargas</a>
                             </li>
                         </ul>
                     </div>

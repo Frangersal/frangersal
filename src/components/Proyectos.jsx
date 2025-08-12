@@ -1,6 +1,7 @@
 import React from 'react';
-import earthIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/solid/earth-americas.svg'
-import githubIcon from '../assets/icons/fontawesome-free-6.4.0-web/svgs/brands/github.svg'
+import githubIcon from '../assets/icons/github.svg'
+
+import urlUpRightIcon from '../assets/icons/up-right-from-square-solid-full.svg'
 
 import './style/Body.css'
 import projects from '../json/projects.json';
@@ -15,7 +16,9 @@ const Proyectos = ({ items = [], darkMode }) => {
         <div className="col-12">
           <hr />
           <h1 className="titulo-tecnologias">Proyectos</h1>
-          <p className="monologo-tecnologias">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam officiis a delectus, possimus exercitationem est quos numquam! Laudantium minus magni deserunt nisi a quis repellendus tempora non, ipsa temporibus placeat.</p>
+          <p className="monologo-tecnologias">
+            A continuación puedes ver algunos de los proyectos en los que he trabajado, donde aplico mis conocimientos en desarrollo web, frameworks modernos y buenas prácticas. Cada proyecto incluye una breve descripción, tecnologías utilizadas y enlaces para ver el demo o el código fuente.
+          </p>
           <div className="tecnologias-container">
             <div className="row row-cols-1 row-cols-md-3 g-4">
               {data.map((project, idx) => (
@@ -31,7 +34,7 @@ const Proyectos = ({ items = [], darkMode }) => {
                     <div className={darkMode ? "card-body card-body-dark" : "card-body"}>
                       <div className="button-group">
                         <a href={project.urlDemo} target="_blank" rel="noopener noreferrer" className="btn btn-success btn-proyecto-link">
-                          <img src={earthIcon} alt="" className="icon-proyecto-link" />
+                          <img src={urlUpRightIcon} alt="" className="icon-proyecto-link" />
                           <span>Demo</span>
                         </a>
                         <a href={project.urlRepo} target="_blank" rel="noopener noreferrer" className="btn btn-dark btn-proyecto-link">

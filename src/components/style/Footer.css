@@ -32,7 +32,7 @@
 .footer-text {
     font-size: 0.875rem; /* fs-6 equivalente - móviles */
     font-weight: bold;
-    color: var(--blanco);
+    color: var(--permablanco) ;
 }
 
 /* Tablet y desktop - tamaño más grande */
