@@ -1,14 +1,31 @@
 import React from 'react';
 import githubIcon from '../assets/icons/github.svg'
 
+
+import portafolio from '../assets/img/proyectos/portafolio.webp'
+import viandamarket from '../assets/img/proyectos/viandamarket.webp'
+import tecnmtutorias from '../assets/img/proyectos/tecnmtutorias.webp'
+import royaltyflights from '../assets/img/proyectos/royaltyflights.webp'
+import micheladastoys from '../assets/img/proyectos/micheladastoys.webp'
+import guitarla from '../assets/img/proyectos/guitarla.webp'
+import calcpc from '../assets/img/proyectos/calcpc.webp'
+import listacompras from '../assets/img/proyectos/listacompras.webp'
+import mytodo from '../assets/img/proyectos/mytodo.webp'
+import mycalculator from '../assets/img/proyectos/mycalculator.webp'
+
 import urlUpRightIcon from '../assets/icons/up-right-from-square-solid-full.svg'
 
 import './style/Body.css'
 import projects from '../json/projects.json';
 
+// Mapa: nombre en JSON (sin .webp) -> import correspondiente
+const imageSrcMap = {
+  portafolio, viandamarket, tecnmtutorias, royaltyflights, micheladastoys, 
+  guitarla, calcpc, listacompras, mytodo, mycalculator
+};
+
 const Proyectos = ({ items = [], darkMode }) => {
   const data = items.length ? items : projects;
-  const urlProjectsImg= "../src/assets/img/proyectos-ss/"
 
   return (
     <div className="container-limitado">
@@ -21,38 +38,42 @@ const Proyectos = ({ items = [], darkMode }) => {
           </p>
           <div className="tecnologias-container">
             <div className="row row-cols-1 row-cols-md-3 g-4">
-              {data.map((project, idx) => (
-                <div className="col" key={idx}>
-                  <div className="card shadow-green">
-                    <h4 className="card-header">
-                      {project.title}
-                    </h4>
-                    <img src={urlProjectsImg+project.img} className="card-img-top" alt={project.title} />
-                    <div className={darkMode ? "card-body card-body-dark" : "card-body"}>
-                      <p className="card-text">{project.description}</p>
-                    </div>
-                    <div className={darkMode ? "card-body card-body-dark" : "card-body"}>
-                      <div className="button-group">
-                        <a href={project.urlDemo} target="_blank" rel="noopener noreferrer" className="btn btn-success btn-proyecto-link">
-                          <img src={urlUpRightIcon} alt="" className="icon-proyecto-link" />
-                          <span>Demo</span>
-                        </a>
-                        <a href={project.urlRepo} target="_blank" rel="noopener noreferrer" className="btn btn-dark btn-proyecto-link">
-                          <img src={githubIcon} alt="" className="icon-proyecto-link" />
-                          <span>Repositorio</span>
-                        </a>
+              {data.map((project, idx) => {
+                const src = imageSrcMap[project.img];
+                if (!src) return null;
+                return (
+                  <div className="col" key={idx}>
+                    <div className="card shadow-green">
+                      <h4 className="card-header">
+                        {project.title}
+                      </h4>
+                      <img src={src} className="card-img-top" alt={project.title} />
+                      <div className={darkMode ? "card-body card-body-dark" : "card-body"}>
+                        <p className="card-text">{project.description}</p>
+                      </div>
+                      <div className={darkMode ? "card-body card-body-dark" : "card-body"}>
+                        <div className="button-group">
+                          <a href={project.urlDemo} target="_blank" rel="noopener noreferrer" className="btn btn-success btn-proyecto-link">
+                            <img src={urlUpRightIcon} alt="" className="icon-proyecto-link" />
+                            <span>Demo</span>
+                          </a>
+                          <a href={project.urlRepo} target="_blank" rel="noopener noreferrer" className="btn btn-dark btn-proyecto-link">
+                            <img src={githubIcon} alt="" className="icon-proyecto-link" />
+                            <span>Repositorio</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div className={darkMode ? "card-footer card-footer-dark" : "card-footer"}>
+                        {Array.isArray(project.tools) && project.tools.map((tool, tIdx) => (
+                          <span key={tIdx} className="badge m-1 bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill">
+                            {tool}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                    <div className={darkMode ? "card-footer card-footer-dark" : "card-footer"}>
-                      {Array.isArray(project.tools) && project.tools.map((tool, tIdx) => (
-                        <span key={tIdx} className="badge m-1 bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill">
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
