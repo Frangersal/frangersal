@@ -7,6 +7,8 @@ import linkedinIcon from '../assets/icons/linkedin.svg'
 import sgithubIcon from '../assets/icons/square-github.svg'
 import envelopeIcon from '../assets/icons/square-envelope.svg'
 
+import cv from '../assets/pdf/Currículum Vitae Francisco G Salinas.pdf'
+
 
 import Header from './Header'
 import Tecnologias from './Tecnologias'
@@ -147,13 +149,13 @@ const Body = () => {
                             </p>
                             <div className="tecnologias-container">
                                 <a
-                                    href="/src/assets/pdf/Currículum Vitae Francisco G Salinas.pdf"
+                                    href={cv}
                                     download="Currículum-Francisco-Salinas.pdf"
                                     className="caja-descarga button-box-descarga shadow-green"
                                     style={{ textDecoration: 'none', color: 'inherit' }}
                                 >
                                     <span className={darkMode ? 'text-descargar-dark' : 'text-descargar'}>
-                                        Descargar CV
+                                        Descargar CV de <br />Francisco G. Salinas 
                                     </span>
                                 </a>
                             </div>
