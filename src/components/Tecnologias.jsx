@@ -8,6 +8,7 @@ import java from '../assets/img/tec/java.webp'
 import php from '../assets/img/tec/php.webp'
 import springboot from '../assets/img/tec/springboot.webp'
 import laravel from '../assets/img/tec/laravel.webp'
+import react from '../assets/img/tec/react.webp'
 import vite from '../assets/img/tec/vite.webp'
 import mysqlb from '../assets/img/tec/mysqlb.webp'
 import git from '../assets/img/tec/git.webp'
@@ -30,7 +31,7 @@ import tecnologias from '../json/tecnologias.json';
 
 // Mapa: nombre en JSON (sin .webp) -> import correspondiente
 const imageSrcMap = {
-  html, css, js, java, php, springboot, laravel, vite, mysqlb,
+  html, css, js, java, php, springboot, laravel, react, vite, mysqlb,
   git, github, bootstrap, twcss, apacheb, postman, npm, node,
   linux, json, figma, blender, photopea, canvas, trello
 };

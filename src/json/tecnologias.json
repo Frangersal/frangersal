@@ -42,6 +42,12 @@
         "urlDocu": "https://laravel.com/docs"
     },
     {
+        "title": "React",
+        "img": "react",
+        "description": "React.js es una biblioteca de JavaScript para crear interfaces de usuario con componentes reutilizables y actualización eficiente del DOM.",
+        "urlDocu": "https://es.react.dev/learn"
+    },
+    {
         "title": "Vite",
         "img": "vite",
         "description": "Vite es un build tool moderno y rápido para proyectos frontend, especialmente para aplicaciones con frameworks como React y Vue.",

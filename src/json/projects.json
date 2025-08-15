@@ -50,7 +50,7 @@
     {
         "title": "My Film Search",
         "img": "myfilmsearch",
-        "description": "Buscador de películas y series que consume la API de TMDb. Incluye búsqueda por texto, feeds, tema claro/oscuro, menú móvil y un modal de detalle con Bootstrap.",
+        "description": "Buscador de películas y series que consume la API de TMDb. Incluye búsqueda por texto, feeds, tema claro/oscuro y un modal de detalle con Bootstrap.",
         "urlDemo": "https://myfilmsearchfgsm.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/my-film-search",
         "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
