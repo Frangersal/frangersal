@@ -96,10 +96,10 @@ const Body = () => {
                                                         <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>&gt;</span>
                                                     </div>
                                                     <p className="perfil-pro">
-                                                        Soy un desarrollador Full Stack Java Jr. y Web
+                                                        Soy un Web
                                                         Developer Jr. con habilidades en Java, PHP, MySQL,
-                                                        Spring, Laravel y Bootstrap. Me apasiona el desarrollo
-                                                        web sobre todo la parte del Backend, estoy siempre
+                                                        React.Js, Laravel y Bootstrap. Me apasiona el desarrollo
+                                                        web sobre todo la parte del Frontend, estoy siempre
                                                         buscando mejorar y estar actualizado en las últimas
                                                         tecnologías. Estoy emocionado por enfrentar nuevos
                                                         desafíos y ser parte de su equipo.

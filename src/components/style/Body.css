@@ -4,10 +4,13 @@
     font-weight: normal;
     font-style: normal;
 }
-
+body{
+    background-color: #dadbd2;
+}
 /* Estilos para el componente Body */
 .body-container-dark {
     margin-top: 40px;
+    background-color: #171717; /* nuevo: fondo negro mientras carga la imagen */
     background-image: url('../../assets/img/code-dark.webp');
     background-size: cover;
     background-position: center;
@@ -19,10 +22,12 @@
     padding-top: 80px;
     /* Compensar altura del navbar fijo */
     /* Removido min-height: 100vh para que se ajuste al contenido */
+    transition: background-color 0.25s ease;
 }
 
 .body-container {
     margin-top: 40px;
+    background-color: #dadbd2; /* nuevo: fondo blanco por defecto */
     background-image: url('../../assets/img/code.webp');
     background-size: cover;
     background-position: center;
@@ -34,6 +39,7 @@
     padding-top: 80px;
     /* Compensar altura del navbar fijo */
     /* Removido min-height: 100vh para que se ajuste al contenido */
+    transition: background-color 0.25s ease;
 }
 
 .puesto-furore {
@@ -84,6 +90,12 @@
     font-size: 50px;
     cursor: default;
     margin-bottom: 6px;
+}
+
+@media (max-width: 466px) {
+    .letra {
+    font-size: 45px;
+}
 }
 
 @keyframes ola-suave {
@@ -184,4 +196,10 @@
     transition: background 0.1s;
     color: #ECEDE7!important;
     transform: translateY(0); /* Vuelve a la posición original al hacer click */
+}
+
+/* Asegurar que el body pase a fondo oscuro inmediatamente en modo oscuro */
+body.dark-mode {
+    background-color: #171717 !important;
+    transition: background-color 0.25s ease;
 }
