@@ -9,6 +9,7 @@ import royaltyflights from '../assets/img/proyectos/royaltyflights.webp'
 import micheladastoys from '../assets/img/proyectos/micheladastoys.webp'
 import guitarla from '../assets/img/proyectos/guitarla.webp'
 import myfilmsearch from '../assets/img/proyectos/myfilmsearch.webp'
+import myblog from '../assets/img/proyectos/myblog.webp'
 import calcpc from '../assets/img/proyectos/calcpc.webp'
 import listacompras from '../assets/img/proyectos/listacompras.webp'
 import mytodo from '../assets/img/proyectos/mytodo.webp'
@@ -22,7 +23,7 @@ import projects from '../json/projects.json';
 // Mapa: nombre en JSON (sin .webp) -> import correspondiente
 const imageSrcMap = {
   portafolio, viandamarket, tecnmtutorias, royaltyflights, micheladastoys, 
-  guitarla, myfilmsearch, calcpc, listacompras, mytodo, mycalculator
+  guitarla, myfilmsearch,myblog, calcpc, listacompras, mytodo, mycalculator
 };
 
 const Proyectos = ({ items = [], darkMode }) => {

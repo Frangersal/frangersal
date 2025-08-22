@@ -30,10 +30,11 @@ import trello from '../assets/img/tec/trello.webp'
 import tecnologias from '../json/tecnologias.json';
 
 // Mapa: nombre en JSON (sin .webp) -> import correspondiente
+//twcss,json,
 const imageSrcMap = {
   html, css, js, java, php, springboot, laravel, react, vite, mysqlb,
-  git, github, bootstrap, twcss, apacheb, postman, npm, node,
-  linux, json, figma, blender, photopea, canvas, trello
+  git, github, bootstrap, apacheb, postman, npm, node,
+  linux, figma, blender, photopea, canvas, trello
 };
 
 const Tecnologias = ({ items = []}) => {

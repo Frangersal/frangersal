@@ -56,6 +56,14 @@
         "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
     },
     {
+        "title": "My Blog",
+        "img": "myblog",
+        "description": "(En desarrollo) Frontend React y Backend Node/Express. Crear, editar y eliminar publicaciones. Función de búsqueda y categorías.",
+        "urlDemo": "https://my-blog-fgsm.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/my-blog",
+        "tools": ["React.Js","JavaScript","Vite","Bootstrap","Node.Js", "Explress.Js"]
+    },
+    {
         "title": "Propinas y Consumo",
         "img": "calcpc",
         "description": "Calculadora de consumo en mesa: permite añadir productos, seleccionar el porcentaje de propina y obtener subtotal, propina y total.",
