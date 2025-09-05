@@ -18,23 +18,23 @@
     {
         "title": "TecNM Tutorias",
         "img": "tecnmtutorias",
-        "description": "Plataforma de tutorías académicas con roles de tutor y pupilo. Permite agendar citas, gestionar sesiones y responder encuestas de seguimiento.",
+        "description": "(En desarrollo) Plataforma de tutorías académicas con roles de tutor y pupilo. Permite agendar citas, gestionar sesiones y responder encuestas de seguimiento.",
         "urlDemo": "https://frangersal.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/TecNMTutorias",
         "tools": ["Laravel","PHP","MySQL","Bootstrap","Apache"]
     },
     {
-        "title": "Royal Flights",
+        "title": "Frank's Flights",
         "img": "royaltyflights",
-        "description": "Sitio corporativo para una empresa de avionetas con módulo de reservas de vuelos chárter, consulta de disponibilidad y detalle de rutas.",
+        "description": "(En desarrollo) Sitio corporativo para una empresa de avionetas con módulo de reservas de vuelos chárter, consulta de disponibilidad y detalle de rutas.",
         "urlDemo": "https://frangersal.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/Front-RoyaltyFlights",
         "tools": ["SpringBoot","Java","MySQL","JavaScript","Bootstrap"]
     },
     {
-        "title": "Micheladas Toys",
+        "title": "Micheladas Frank's",
         "img": "micheladastoys",
-        "description": "Propuesta de maquetado estático y responsivo enfocada en una presentación limpia de productos y secciones informativas.",
+        "description": "(En desarrollo) Propuesta de maquetado estático y responsivo enfocada en una presentación limpia de productos y secciones informativas.",
         "urlDemo": "https://frangersal.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/MicheladasToys",
         "tools": ["Bootstrap","HTML","CSS"]
@@ -62,6 +62,14 @@
         "urlDemo": "https://my-blog-fgsm.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/my-blog",
         "tools": ["React.Js","JavaScript","Vite","Bootstrap","Node.Js", "Explress.Js"]
+    },
+    {
+        "title": "Interes Compuesto",
+        "img": "interescompuesto",
+        "description": "Calculadora de interés compuesto que permite simular proyecciones futuras de una inversión aplicando el método del interés compuesto.",
+        "urlDemo": "https://compound-interest-fgsm.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/my-compound-interest",
+        "tools": ["React.Js","JavaScript","Vite","Bootstrap", "Chart.Js"]
     },
     {
         "title": "Propinas y Consumo",

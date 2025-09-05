@@ -108,6 +108,12 @@
         "urlDocu": "https://nodejs.org/es/docs/"
     },
     {
+        "title": "Chart.js",
+        "img": "chart",
+        "description": "Chart.js es una biblioteca de JavaScript para crear gráficos interactivos y responsivos (líneas, barras, pasteles, áreas, etc.). Ofrece opciones de personalización, animaciones y soporte para datos dinámicos, facilitando la visualización de información en el navegador.",
+        "urlDocu": "https://www.chartjs.org/docs/latest/"
+    },
+    {
         "title": "Linux/WSL",
         "img": "linux",
         "description": "Linux es un sistema operativo de código abierto ampliamente usado en servidores y desarrollo. WSL permite ejecutar Linux en Windows.",

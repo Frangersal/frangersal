@@ -19,6 +19,7 @@ import apacheb from '../assets/img/tec/apacheb.webp'
 import postman from '../assets/img/tec/postman.webp'
 import npm from '../assets/img/tec/npm.webp'
 import node from '../assets/img/tec/node.webp'
+import chart from '../assets/img/tec/chart.webp'
 import linux from '../assets/img/tec/linux.webp'
 import json from '../assets/img/tec/json.webp'
 import figma from '../assets/img/tec/figma.webp'
@@ -33,7 +34,7 @@ import tecnologias from '../json/tecnologias.json';
 //twcss,json,
 const imageSrcMap = {
   html, css, js, java, php, springboot, laravel, react, vite, mysqlb,
-  git, github, bootstrap, apacheb, postman, npm, node,
+  git, github, bootstrap, apacheb, postman, npm, node, chart,
   linux, figma, blender, photopea, canvas, trello
 };
 

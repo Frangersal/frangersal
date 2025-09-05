@@ -13,7 +13,13 @@
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
         "pdf": ""
     },
-    
+    {
+        "title": "Backend con Express.Js",
+        "org": "Platzi",
+        "year": 2025,
+        "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
+        "pdf": "pdf/platzi/18-node-expressjs.pdf"
+    },
     {
         "title": "Frameworks y Librerías de JavaScript",
         "org": "Platzi",
