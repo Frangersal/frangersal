@@ -72,6 +72,14 @@
         "tools": ["React.Js","JavaScript","Vite","Bootstrap", "Chart.Js"]
     },
     {
+        "title": "Crossy Road",
+        "img": "crossyroad",
+        "description": "Video juego inspirado en Crossy Road y Frogger siguiendo un tutorial de Youtube, con modelos 3d, colisiones, puntaje, etc.",
+        "urlDemo": "https://crossyroad-fgsm.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/my-crossy-road-game",
+        "tools": ["React.Js","TypeScript","Vite","Bootstrap", "Three.Js"]
+    },
+    {
         "title": "Propinas y Consumo",
         "img": "calcpc",
         "description": "Calculadora de consumo en mesa: permite añadir productos, seleccionar el porcentaje de propina y obtener subtotal, propina y total.",
