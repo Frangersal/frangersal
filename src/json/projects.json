@@ -16,12 +16,12 @@
         "tools": ["SpringBoot","Java","MySQL","JavaScript","Bootstrap"]
     },
     {
-        "title": "TecNM Tutorias",
+        "title": "TecNM Tutorías",
         "img": "tecnmtutorias",
-        "description": "(En desarrollo) Plataforma de tutorías académicas con roles de tutor y pupilo. Permite agendar citas, gestionar sesiones y responder encuestas de seguimiento.",
-        "urlDemo": "https://frangersal.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/TecNMTutorias",
-        "tools": ["Laravel","PHP","MySQL","Bootstrap","Apache"]
+        "description": "(En desarrollo) Plataforma de tutorías académicas con roles de tutor y alumno. Permite agendar citas, gestionar sesiones y responder Formularios de seguimiento.",
+        "urlDemo": "https://tutoriasita-production.up.railway.app/",
+        "urlRepo": "https://github.com/Frangersal/TutoriasITA",
+        "tools": ["Laravel","PHP","React.Js","Vite","MySQL","tailwind","Apache"]
     },
     {
         "title": "Frank's Flights",

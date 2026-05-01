@@ -26,7 +26,7 @@ import projects from '../json/projects.json';
 const imageSrcMap = {
   portafolio, 
   // viandamarket, 
-  // tecnmtutorias, 
+  tecnmtutorias, 
   // royaltyflights, 
   // micheladastoys, 
   guitarla, 
