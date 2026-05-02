@@ -25,7 +25,7 @@ import projects from '../json/projects.json';
 // Mapa: nombre en JSON (sin .webp) -> import correspondiente
 const imageSrcMap = {
   portafolio, 
-  // viandamarket, 
+  viandamarket, 
   tecnmtutorias, 
   // royaltyflights, 
   // micheladastoys, 

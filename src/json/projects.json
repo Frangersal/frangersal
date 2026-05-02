@@ -11,7 +11,7 @@
         "title": "Vianda Market",
         "img": "viandamarket",
         "description": "Tienda online de carnes con catálogo, carrito de compras y proceso de pago. Integra un flujo de compra claro y componentes responsivos para una experiencia ágil.",
-        "urlDemo": "https://frangersal.netlify.app/",
+        "urlDemo": "https://viandamarket-front-production.up.railway.app/",
         "urlRepo": "https://github.com/Frangersal/GenMx-ViandaMarket-Front",
         "tools": ["SpringBoot","Java","MySQL","JavaScript","Bootstrap"]
     },
