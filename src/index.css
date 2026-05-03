@@ -24,8 +24,13 @@ Global recomendado
     --test3: #a80000;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url(./assets/fonts/RobotoMono-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 @font-face {
     font-family: Klein, "Arial Black", "Helvetica Bold", Arial, sans-serif;

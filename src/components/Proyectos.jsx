@@ -48,7 +48,7 @@ const Proyectos = ({ items = [], darkMode }) => {
       <div className="row seccion-f">
         <div className="col-12">
           <hr />
-          <h1 className="titulo-tecnologias">Proyectos</h1>
+          <h2 className="titulo-tecnologias">Proyectos</h2>
           <p className="monologo-tecnologias">
             A continuación puedes ver algunos de los proyectos en los que he trabajado, donde aplico mis conocimientos en desarrollo web, frameworks modernos y buenas prácticas. Cada proyecto incluye una breve descripción, tecnologías utilizadas y enlaces para ver el demo o el código fuente.
           </p>
@@ -60,9 +60,9 @@ const Proyectos = ({ items = [], darkMode }) => {
                 return (
                   <div className="col" key={idx}>
                     <div className="card shadow-green">
-                      <h4 className="card-header">
+                      <h3 className="card-header">
                         {project.title}
-                      </h4>
+                      </h3>
                       <img src={src} className="card-img-top" alt={project.title} />
                       <div className={darkMode ? "card-body card-body-dark" : "card-body"}>
                         <p className="card-text">{project.description}</p>

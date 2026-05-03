@@ -66,7 +66,7 @@ const Body = () => {
     return (
         <>
             <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-            <div className={darkMode ? "body-container-dark" : "body-container"}>
+            <main className={darkMode ? "body-container-dark" : "body-container"}>
                 <div className="container-limitado" id="perfil-section">
                     <div className="card shadow-green-off text-bg-dark  " >
                         <div className="card-header ">
@@ -163,7 +163,7 @@ const Body = () => {
                     </div>
                 </div>
 
-            </div>
+            </main>
             {showScrollTop && (
                 <button
                     className="scroll-top-btn shadow-green"

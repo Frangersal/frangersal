@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'Furore';
-    src: url('../../assets/fonts/Furore.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
 body{
     background-color: #dadbd2;
 }
