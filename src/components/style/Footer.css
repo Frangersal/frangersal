@@ -28,6 +28,36 @@
     padding: 2px;
 }
 
+.btn-rendimiento {
+    position: relative;
+    overflow: hidden;
+    padding: 8px 18px;
+    height: 55px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, rgba(185, 185, 185, 0.17), rgba(1, 29, 0, 0));
+    backdrop-filter: blur(3px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn-rendimiento:hover {
+    background: linear-gradient(145deg, #42ff8e, var(--limon));
+    transform: translateY(-3px);
+    border-color: var(--limon);
+    box-shadow: 0 20px 27px #0c7e4a8e, inset 0 2px 0 rgba(255, 255, 255, 0.35); /* Sombra verde on */
+}
+
+.btn-rendimiento:active {
+    background: var(--verde) !important;
+    transition: background 0.1s;
+    transform: translateY(0);
+}
+
 /* Tamaño de texto responsive para el footer */
 .footer-text {
     font-size: 0.875rem; /* fs-6 equivalente - móviles */

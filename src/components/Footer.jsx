@@ -1,8 +1,7 @@
 import React from 'react'
 import './style/Footer.css'
-import githubIcon from '../assets/icons/square-github.svg'
-import linkedinIcon from '../assets/icons/linkedin.svg'
-import twitterIcon from '../assets/icons/linkedin.svg'
+import pageSpeedIcon from '../assets/img/pagespeedinsights.webp'
+import w3cIcon from '../assets/img/nuhtmlchecker.webp'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -12,22 +11,19 @@ const Footer = () => {
             <footer className="bg-verde text-white py-4">
                 <div className="container">
                     <div className="text-center">
-                        {/* Iconos de redes sociales */}
-                        {/* <div className="mb-3">
-                            <div className="d-flex justify-content-center gap-3">
-                                <a href="#" className="text-white fs-4 social-icon" target="_blank" rel="noopener noreferrer">
-                                    <img src={githubIcon} alt="GitHub" width="24" height="24" />
+                        {/* paginas de rendimiento */}
+                        <div className="mb-3 mt-4">
+                            <div className="d-flex justify-content-center gap-4">
+                                <a href="https://pagespeed.web.dev/analysis/https-frangersal-netlify-app/8d2aj9y6x7?form_factor=desktop" target="_blank" rel="noopener noreferrer" className="btn-rendimiento shadow-green">
+                                    <img src={pageSpeedIcon} alt="PageSpeed Insights" height="30" className="rounded" />
                                 </a>
                                 
-                                <a href="#" className="text-white fs-4 social-icon" target="_blank" rel="noopener noreferrer">
-                                    <img src={linkedinIcon} alt="LinkedIn" width="24" height="24" />
+                                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Ffrangersal.netlify.app%2F" target="_blank" rel="noopener noreferrer" className="btn-rendimiento shadow-green">
+                                    <img src={w3cIcon} alt="W3C Nu HTML Checker" height="30" className="rounded" />
                                 </a>
                                 
-                                <a href="#" className="text-white fs-4 social-icon" target="_blank" rel="noopener noreferrer">
-                                    <img src={twitterIcon} alt="Twitter" width="24" height="24" />
-                                </a>
                             </div>
-                        </div> */}
+                        </div> 
                         
                         {/* Mensaje de copyright */}
                         <div>
@@ -35,6 +31,7 @@ const Footer = () => {
                                 &lt;Frangersal year=&#123;{currentYear}&#125; country=&#123;México&#125;/&gt; ©
                             </p>
                         </div>
+
                     </div>
                 </div>
             </footer>
