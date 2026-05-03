@@ -6,7 +6,7 @@ import portafolio from '../assets/img/proyectos/portafolio.webp'
 import viandamarket from '../assets/img/proyectos/viandamarket.webp'
 import tecnmtutorias from '../assets/img/proyectos/tecnmtutorias.webp'
 import royaltyflights from '../assets/img/proyectos/royaltyflights.webp'
-import micheladastoys from '../assets/img/proyectos/micheladastoys.webp'
+import micheladasfranks from '../assets/img/proyectos/micheladasfranks.webp'
 import guitarla from '../assets/img/proyectos/guitarla.webp'
 import myfilmsearch from '../assets/img/proyectos/myfilmsearch.webp'
 import myblog from '../assets/img/proyectos/myblog.webp'
@@ -28,7 +28,7 @@ const imageSrcMap = {
   viandamarket, 
   tecnmtutorias, 
   // royaltyflights, 
-  // micheladastoys, 
+  micheladasfranks, 
   guitarla, 
   myfilmsearch,
   // myblog, 

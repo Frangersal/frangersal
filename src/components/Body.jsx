@@ -105,7 +105,7 @@ const Body = () => {
                                                         desafíos y ser parte de su equipo.
                                                     </p>
                                                     <div className="descripcion_boton">
-                                                        <a href="https://wa.me/527443492221" target="_blank" rel="noopener noreferrer" className="button-box button-box-contact shadow-green center">
+                                                        <a href="https://wa.me/525637462715" target="_blank" rel="noopener noreferrer" className="button-box button-box-contact shadow-green center">
                                                             <img className="boton-icono" src={whatsappIcon} alt="WhatsApp" />
                                                         </a>
                                                         <a href="https://www.linkedin.com/in/frangersal/" target="_blank" rel="noopener noreferrer" className="button-box button-box-contact shadow-green center">

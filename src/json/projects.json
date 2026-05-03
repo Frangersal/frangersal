@@ -33,10 +33,10 @@
     },
     {
         "title": "Micheladas Frank's",
-        "img": "micheladastoys",
-        "description": "(En desarrollo) Propuesta de maquetado estático y responsivo enfocada en una presentación limpia de productos y secciones informativas.",
-        "urlDemo": "https://frangersal.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/MicheladasToys",
+        "img": "micheladasfranks",
+        "description": "Practica de maquetado responsivo con tematica de restaurante bar de micheladas y hamburguesas, pagina estatica con secciones e información del negocio.",
+        "urlDemo": "https://micheladasfranks.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/MicheladasFranks",
         "tools": ["Bootstrap","HTML","CSS"]
     },
     {
