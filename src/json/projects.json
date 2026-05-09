@@ -100,7 +100,7 @@
         "img": "grocultural",
         "description": "Calculadora de consumo en mesa: permite añadir productos, seleccionar el porcentaje de propina y obtener subtotal, propina y total.",
         "urlDemo": "https://grocultural.netlify.app/",
-        "urlRepo": "https://github.com/Frangersal/grocultural",
+        "urlRepo": "https://github.com/Frangersal/groCultural-Backend",
         "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
     },    
     {
