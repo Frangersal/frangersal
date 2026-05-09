@@ -13,6 +13,9 @@ import myblog from '../assets/img/proyectos/myblog.webp'
 import interescompuesto from '../assets/img/proyectos/interescompuesto.webp'
 import crossyroad from '../assets/img/proyectos/crossyroad.webp'
 import calcpc from '../assets/img/proyectos/calcpc.webp'
+import alitalia from '../assets/img/proyectos/alitalia.webp'
+import grocultural from '../assets/img/proyectos/grocultural.webp'
+import dulceriasalinas from '../assets/img/proyectos/dulceriasalinas.webp'
 import listacompras from '../assets/img/proyectos/listacompras.webp'
 import mytodo from '../assets/img/proyectos/mytodo.webp'
 import mycalculator from '../assets/img/proyectos/mycalculator.webp'
@@ -35,6 +38,9 @@ const imageSrcMap = {
   interescompuesto, 
   crossyroad,
   calcpc, 
+  alitalia,
+  grocultural,
+  dulceriasalinas,
   listacompras, 
   mytodo, 
   mycalculator

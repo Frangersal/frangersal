@@ -88,6 +88,30 @@
         "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
     },
     {
+        "title": "Alitalia",
+        "img": "alitalia",
+        "description": "Calculadora de consumo en mesa: permite añadir productos, seleccionar el porcentaje de propina y obtener subtotal, propina y total.",
+        "urlDemo": "https://alitalia.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/alitalia",
+        "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
+    },
+    {
+        "title": "groCultural",
+        "img": "grocultural",
+        "description": "Calculadora de consumo en mesa: permite añadir productos, seleccionar el porcentaje de propina y obtener subtotal, propina y total.",
+        "urlDemo": "https://grocultural.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/grocultural",
+        "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
+    },    
+    {
+        "title": "Dulceria Salinas",
+        "img": "dulceriasalinas",
+        "description": "Calculadora de consumo en mesa: permite añadir productos, seleccionar el porcentaje de propina y obtener subtotal, propina y total.",
+        "urlDemo": "https://dulceriasalinas.netlify.app/",
+        "urlRepo": "https://github.com/Frangersal/dulceriasalinas",
+        "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
+    },
+    {
         "title": "Lista de compras",
         "img": "listacompras",
         "description": "Aplicación para registrar artículos de compra con nombre y cantidad. Permite gestionar la lista de forma simple y rápida.",
