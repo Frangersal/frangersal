@@ -90,26 +90,26 @@
     {
         "title": "Alitalia",
         "img": "alitalia",
-        "description": "Calculadora de consumo en mesa: permite añadir productos, seleccionar el porcentaje de propina y obtener subtotal, propina y total.",
+        "description": "Practica de maquetado responsivo con temática de venta de productos hospitalarios.",
         "urlDemo": "https://alitalia.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/alitalia",
-        "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
+        "tools": ["HTML","CSS","Bootstrap"]
     },
     {
         "title": "groCultural",
         "img": "grocultural",
-        "description": "Calculadora de consumo en mesa: permite añadir productos, seleccionar el porcentaje de propina y obtener subtotal, propina y total.",
+        "description": "Proyecto enfocado en documentar, preservar y difundir la riqueza cultural, geográfica y biológica de Guerrero.",
         "urlDemo": "https://grocultural-backend-production.up.railway.app/",
         "urlRepo": "https://github.com/Frangersal/groCultural-Backend",
-        "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
+        "tools": ["Laravel","PHP","MySQL","Bootstrap","Apache"]
     },    
     {
         "title": "Dulceria Salinas",
         "img": "dulceriasalinas",
-        "description": "Calculadora de consumo en mesa: permite añadir productos, seleccionar el porcentaje de propina y obtener subtotal, propina y total.",
+        "description": "Practica de maquetado responsivo con temática de venta de productos de dulcería.",
         "urlDemo": "https://dulceriasalinas.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/dulceriasalinas",
-        "tools": ["React.Js","JavaScript","Vite","Bootstrap"]
+        "tools": ["HTML","CSS","Bootstrap"]
     },
     {
         "title": "Lista de compras",
