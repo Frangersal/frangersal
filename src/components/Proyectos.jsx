@@ -5,6 +5,7 @@ import githubIcon from '../assets/icons/github.svg'
 import portafolio from '../assets/img/proyectos/portafolio.webp'
 import viandamarket from '../assets/img/proyectos/viandamarket.webp'
 import tecnmtutorias from '../assets/img/proyectos/tecnmtutorias.webp'
+import giosperfumes from '../assets/img/proyectos/giosperfumes.webp'
 import royaltyflights from '../assets/img/proyectos/royaltyflights.webp'
 import micheladasfranks from '../assets/img/proyectos/micheladasfranks.webp'
 import guitarla from '../assets/img/proyectos/guitarla.webp'
@@ -30,6 +31,7 @@ const imageSrcMap = {
   portafolio, 
   viandamarket, 
   tecnmtutorias, 
+  giosperfumes,
   // royaltyflights, 
   micheladasfranks, 
   guitarla, 

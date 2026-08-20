@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 
-import foto from '../assets/img/foto/Perfil Frangersal 2025.webp'
+import foto from '../assets/img/foto/Perfil Frangersal 2026.webp'
 
 import whatsappIcon from '../assets/icons/square-whatsapp.svg'
 import linkedinIcon from '../assets/icons/linkedin.svg'

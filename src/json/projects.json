@@ -24,6 +24,14 @@
         "tools": ["Laravel","PHP","React.Js","Vite","MySQL","tailwind","Apache"]
     },
     {
+        "title": "Gios Perfumes",
+        "img": "giosperfumes",
+        "description": "Sitio para la venta de perfumes para un emprendimiento. Cuenta con carrito de compras, pasarela de pagos, sesiones, roles",
+        "urlDemo": "https://gios-perfumes-dev.up.railway.app/",
+        "urlRepo": "https://github.com/Frangersal/gios-perfumes",
+        "tools": ["Laravel","PHP","React.Js","Vite","MySQL","Bootstrap","Apache"]
+    },
+    {
         "title": "Frank's Flights",
         "img": "royaltyflights",
         "description": "(En desarrollo) Sitio corporativo para una empresa de avionetas con módulo de reservas de vuelos chárter, consulta de disponibilidad y detalle de rutas.",
