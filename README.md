@@ -42,10 +42,10 @@
     alt="GitHub Stats" 
   /> -->
 
-  <img 
-    src="https://github-readme-streak-stats.herokuapp.com/?user=frangersal&background=0D1117&stroke=00FF99&ring=00FF99&fire=00FF99&currStreakLabel=FFFFFF&sideLabels=FFFFFF&dates=FFFFFF&currStreakNum=00FF99&sideNums=00FF99&border=00FF99" 
-    alt="GitHub Streak" 
-  />
+<img 
+  src="https://github-readme-streak-stats.herokuapp.com/?user=frangersal&background=0D1117&stroke=00FF99&ring=00FF99&fire=00FF99&currStreakLabel=FFFFFF&sideLabels=FFFFFF&dates=FFFFFF&currStreakNum=00FF99&sideNums=00FF99&border=00FF99"
+  alt="GitHub Streak"
+/>
 <!--
   <img 
     src="https://github-stats-extended.vercel.app/api/top-langs/?username=frangersal&layout=compact&bg_color=0D1117&title_color=00FF99&text_color=FFFFFF&icon_color=00FF99&border_color=00FF99&hide_border=false&card_width=495" 
