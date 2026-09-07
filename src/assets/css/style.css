@@ -800,9 +800,10 @@ hr {
 .proyectos-bento {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-auto-flow: dense;
-  column-gap: 16px;
-  row-gap: 16px;
+  /* sin "dense": respeta el orden real (relevance) en vez de reordenar para rellenar huecos */
+  grid-auto-flow: row;
+  column-gap: 32px;
+  row-gap: 32px;
   width: 100%;
 }
 
@@ -827,10 +828,12 @@ hr {
   margin: 0;
   position: relative;
   overflow: hidden;
-  border: 0;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(46, 204, 113, 0.16);
+  border-radius: 18px;
   isolation: isolate;
-  transition: box-shadow 420ms ease, transform 420ms ease;
+  transition: box-shadow 420ms ease, transform 420ms ease, border-color 420ms ease;
 }
 
 .proyecto-bento-item .card::after {
@@ -850,12 +853,44 @@ hr {
 }
 
 .proyecto-bento-item .card:hover {
-  box-shadow: 0 16px 32px rgba(12, 126, 74, 0.48);
-  transform: translateY(-4px);
+  box-shadow: var(--shadow-green-on);
+  border-color: rgba(46, 204, 113, 0.55);
+  transform: translateY(-6px);
 }
 
 .proyecto-bento-item .card:hover::after {
   opacity: 1;
+}
+
+.proyecto-bento-item .card-header {
+  justify-content: flex-start;
+  padding: 0 14px;
+}
+
+.proyecto-bento-item .proyecto-titulo {
+  flex: 1;
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.proyecto-bento-item .proyecto-img-wrap {
+  overflow: hidden;
+}
+
+.proyecto-bento-item .proyecto-img-wrap .card-img-top {
+  width: 100%;
+  display: block;
+  transition: transform 600ms ease;
+}
+
+.proyecto-bento-item .card:hover .proyecto-img-wrap .card-img-top {
+  transform: scale(1.07);
 }
 
 .proyecto-bento-item.importancia-3 .card-img-top {
@@ -879,6 +914,21 @@ hr {
 
 .proyecto-bento-item .card-text {
   margin-bottom: 0;
+  line-height: 1.55;
+  font-size: 13.5px;
+}
+
+.proyecto-bento-item .proyecto-links {
+  padding-top: 0;
+  padding-bottom: 0.9rem;
+}
+
+.proyecto-bento-item .card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .proyecto-bento-item.importancia-3 .button-group {
@@ -915,19 +965,47 @@ hr {
 .btn-proyecto-link {
   border-radius: 20px !important;
   margin: 5px;
-  /* padding: 5px 5px !important; */
-  font-size: 5px !important;
+  padding: 6px 14px !important;
+  font-size: 12.5px !important;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 6px;
-  /* box-shadow: 0 2px 8px rgba(0,0,0,0.08); */
-  /* transition: background 0.2s, color 0.2s; */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-proyecto-link:hover {
+  transform: translateY(-2px);
 }
 
 .btn-proyecto-link .icon-proyecto-link {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   filter: brightness(0) invert(1);
+}
+
+.chip-tecnologia {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--verde);
+  background-color: rgba(46, 204, 113, 0.12);
+  border: 1px solid rgba(46, 204, 113, 0.35);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.card-footer-dark .chip-tecnologia {
+  color: #7cfca6;
+  background-color: rgba(66, 255, 142, 0.12);
+  border-color: rgba(66, 255, 142, 0.4);
+}
+
+.chip-tecnologia:hover {
+  background-color: var(--limon);
+  color: #06301d;
 }
 
 .scroll-top-btn {

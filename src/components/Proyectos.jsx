@@ -45,7 +45,9 @@ const imageSrcMap = {
 };
 
 const Proyectos = ({ items = [], darkMode }) => {
-  const data = items.length ? items : projects;
+  const data = (items.length ? items : projects)
+    .slice()
+    .sort((a, b) => (a.relevance ?? 999) - (b.relevance ?? 999));
 
   return (
     <div className="container-limitado">
