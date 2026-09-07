@@ -2,6 +2,7 @@
     {
         "title": "Portafolio",
         "img": "portafolio",
+        "importance": 1,
         "description": "Portafolio profesional desarrollado con React y Vite. Presenta proyectos, tecnologías y certificados en una interfaz responsive con modo oscuro, navegación clara y buenas prácticas de UI. ",
         "urlDemo": "https://frangersal.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/frangersal",
@@ -10,6 +11,7 @@
     {
         "title": "Vianda Market",
         "img": "viandamarket",
+        "importance": 1,
         "description": "Tienda online de carnes con catálogo, carrito de compras y proceso de pago. Integra un flujo de compra claro y componentes responsivos para una experiencia ágil.",
         "urlDemo": "https://viandamarket-front-production.up.railway.app/",
         "urlRepo": "https://github.com/Frangersal/GenMx-ViandaMarket-Front",
@@ -18,6 +20,7 @@
     {
         "title": "TecNM Tutorías",
         "img": "tecnmtutorias",
+        "importance": 1,
         "description": "(En desarrollo) Plataforma de tutorías académicas con roles de tutor y alumno. Permite agendar citas, gestionar sesiones y responder Formularios de seguimiento.",
         "urlDemo": "https://tutoriasita-production.up.railway.app/",
         "urlRepo": "https://github.com/Frangersal/TutoriasITA",
@@ -26,6 +29,7 @@
     {
         "title": "Gios Perfumes",
         "img": "giosperfumes",
+        "importance": 1,
         "description": "Sitio para la venta de perfumes para un emprendimiento. Cuenta con carrito de compras, pasarela de pagos, sesiones, roles",
         "urlDemo": "https://gios-perfumes-dev.up.railway.app/",
         "urlRepo": "https://github.com/Frangersal/gios-perfumes",
@@ -34,6 +38,7 @@
     {
         "title": "Frank's Flights",
         "img": "royaltyflights",
+        "importance": 3,
         "description": "(En desarrollo) Sitio corporativo para una empresa de avionetas con módulo de reservas de vuelos chárter, consulta de disponibilidad y detalle de rutas.",
         "urlDemo": "https://frangersal.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/Front-RoyaltyFlights",
@@ -42,6 +47,7 @@
     {
         "title": "Micheladas Frank's",
         "img": "micheladasfranks",
+        "importance": 2,
         "description": "Practica de maquetado responsivo con tematica de restaurante bar de micheladas y hamburguesas, pagina estatica con secciones e información del negocio.",
         "urlDemo": "https://micheladasfranks.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/MicheladasFranks",
@@ -50,6 +56,7 @@
     {
         "title": "GuitarLA",
         "img": "guitarla",
+        "importance": 2,
         "description": "Aplicación inicial en React con catálogo de guitarras y carrito de compras. Manejo de estado, componentes reutilizables y UI adaptable.",
         "urlDemo": "https://hilarious-hotteok-ac72ea.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/guitarla",
@@ -58,6 +65,7 @@
     {
         "title": "My Film Search",
         "img": "myfilmsearch",
+        "importance": 2,
         "description": "Buscador de películas y series que consume la API de TMDb. Incluye búsqueda por texto, feeds, tema claro/oscuro y un modal de detalle con Bootstrap.",
         "urlDemo": "https://myfilmsearchfgsm.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/my-film-search",
@@ -66,6 +74,7 @@
     {
         "title": "My Blog",
         "img": "myblog",
+        "importance": 3,
         "description": "(En desarrollo) Frontend React y Backend Node/Express. Crear, editar y eliminar publicaciones. Función de búsqueda y categorías.",
         "urlDemo": "https://my-blog-fgsm.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/my-blog",
@@ -74,6 +83,7 @@
     {
         "title": "Interes Compuesto",
         "img": "interescompuesto",
+        "importance": 2,
         "description": "Calculadora de interés compuesto que permite simular proyecciones futuras de una inversión aplicando el método del interés compuesto.",
         "urlDemo": "https://compound-interest-fgsm.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/my-compound-interest",
@@ -82,6 +92,7 @@
     {
         "title": "Crossy Road",
         "img": "crossyroad",
+        "importance": 2,
         "description": "Video juego inspirado en Crossy Road y Frogger siguiendo un tutorial de Youtube, con modelos 3d, colisiones, puntaje, etc.",
         "urlDemo": "https://crossyroad-fgsm.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/my-crossy-road-game",
@@ -90,6 +101,7 @@
     {
         "title": "Propinas y Consumo",
         "img": "calcpc",
+        "importance": 2,
         "description": "Calculadora de consumo en mesa: permite añadir productos, seleccionar el porcentaje de propina y obtener subtotal, propina y total.",
         "urlDemo": "https://gilded-basbousa-b0ca7f.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/calculadora_propinas",
@@ -98,6 +110,7 @@
     {
         "title": "Alitalia",
         "img": "alitalia",
+        "importance": 3,
         "description": "Practica de maquetado responsivo con temática de venta de productos hospitalarios.",
         "urlDemo": "https://alitalia.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/alitalia",
@@ -106,6 +119,7 @@
     {
         "title": "groCultural",
         "img": "grocultural",
+        "importance": 1,
         "description": "Proyecto enfocado en documentar, preservar y difundir la riqueza cultural, geográfica y biológica de Guerrero.",
         "urlDemo": "https://grocultural-backend-production.up.railway.app/",
         "urlRepo": "https://github.com/Frangersal/groCultural-Backend",
@@ -114,6 +128,7 @@
     {
         "title": "Dulceria Salinas",
         "img": "dulceriasalinas",
+        "importance": 3,
         "description": "Practica de maquetado responsivo con temática de venta de productos de dulcería.",
         "urlDemo": "https://dulceriasalinas.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/dulceriasalinas",
@@ -122,6 +137,7 @@
     {
         "title": "Lista de compras",
         "img": "listacompras",
+        "importance": 3,
         "description": "Aplicación para registrar artículos de compra con nombre y cantidad. Permite gestionar la lista de forma simple y rápida.",
         "urlDemo": "https://fgsmlistadecompras.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/CH25_ListaCompras-Fran",
@@ -130,6 +146,7 @@
     {
         "title": "To do list",
         "img": "mytodo",
+        "importance": 3,
         "description": "Gestor de tareas en React para crear, marcar como completadas y eliminar pendientes con una interfaz clara y reactiva.",
         "urlDemo": "https://my-todo-fgsm.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/my-to-do-app",
@@ -138,6 +155,7 @@
     {
         "title": "Calculadora",
         "img": "mycalculator",
+        "importance": 3,
         "description": "Calculadora básica desarrollada en React con operaciones esenciales y diseño minimalista.",
         "urlDemo": "https://my-calculadora-fgsm.netlify.app/",
         "urlRepo": "https://github.com/Frangersal/my-calculator",

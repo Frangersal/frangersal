@@ -796,6 +796,122 @@ hr {
   display: flex;
   justify-content: center;
 }
+
+.proyectos-bento {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-flow: dense;
+  column-gap: 16px;
+  row-gap: 16px;
+  width: 100%;
+}
+
+.proyecto-bento-item {
+  min-width: 0;
+}
+
+.proyecto-bento-item.importancia-1 {
+  grid-column: span 9;
+}
+
+.proyecto-bento-item.importancia-2 {
+  grid-column: span 6;
+}
+
+.proyecto-bento-item.importancia-3 {
+  grid-column: span 3;
+}
+
+.proyecto-bento-item .card {
+  height: 100%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 8px;
+  isolation: isolate;
+  transition: box-shadow 420ms ease, transform 420ms ease;
+}
+
+.proyecto-bento-item .card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(280px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(7, 95, 56, 0.2) 0%, rgba(7, 95, 56, 0.1) 38%, transparent 72%);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.proyecto-bento-item .card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.proyecto-bento-item .card:hover {
+  box-shadow: 0 16px 32px rgba(12, 126, 74, 0.48);
+  transform: translateY(-4px);
+}
+
+.proyecto-bento-item .card:hover::after {
+  opacity: 1;
+}
+
+.proyecto-bento-item.importancia-3 .card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
+
+.proyecto-bento-item.importancia-2 .card-img-top {
+  height: 210px;
+  object-fit: cover;
+}
+
+.proyecto-bento-item.importancia-1 .card-img-top {
+  height: 280px;
+  object-fit: cover;
+}
+
+.proyecto-bento-item .card-body {
+  padding: 1rem;
+}
+
+.proyecto-bento-item .card-text {
+  margin-bottom: 0;
+}
+
+.proyecto-bento-item.importancia-3 .button-group {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.proyecto-bento-item.importancia-3 .btn-proyecto-link {
+  justify-content: center;
+  width: calc(100% - 10px);
+  margin: 4px 5px;
+  font-size: 12px !important;
+}
+
+@media (max-width: 767px) {
+  .proyectos-bento {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .proyecto-bento-item.importancia-1,
+  .proyecto-bento-item.importancia-2,
+  .proyecto-bento-item.importancia-3 {
+    grid-column: auto;
+  }
+
+  .proyecto-bento-item.importancia-1 .card-img-top,
+  .proyecto-bento-item.importancia-2 .card-img-top,
+  .proyecto-bento-item.importancia-3 .card-img-top {
+    height: 200px;
+  }
+}
+
 .btn-proyecto-link {
   border-radius: 20px !important;
   margin: 5px;
