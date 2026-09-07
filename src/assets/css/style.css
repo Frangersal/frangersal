@@ -551,7 +551,7 @@ Cara
 }
 
 .card-body {
-  background-color: #ecede7 !important;
+  background-color: rgba(236, 237, 231, 0.55) !important;
   color: #000;
 }
 
@@ -561,7 +561,7 @@ Cara
 }
 
 .card-footer {
-  background-color: #ecede7 !important;
+  background-color: rgba(236, 237, 231, 0.55) !important;
   color: #000;
   border-radius: 0px 0px 20px 20px;
 }
@@ -809,6 +809,8 @@ hr {
 
 .proyecto-bento-item {
   min-width: 0;
+  border-radius: 18px;
+  transition: box-shadow 420ms ease, transform 420ms ease;
 }
 
 .proyecto-bento-item.importancia-1 {
@@ -833,7 +835,10 @@ hr {
   border: 1px solid rgba(46, 204, 113, 0.16);
   border-radius: 18px;
   isolation: isolate;
-  transition: box-shadow 420ms ease, transform 420ms ease, border-color 420ms ease;
+  /* fuerza su propia capa de composición: evita el artefacto de blur que se acumula en la esquina al repintar seguido (backdrop-filter + overflow:hidden + border-radius) */
+  transform: translateZ(0);
+  will-change: transform;
+  transition: border-color 420ms ease;
 }
 
 .proyecto-bento-item .card::after {
@@ -842,9 +847,15 @@ hr {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: radial-gradient(280px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(7, 95, 56, 0.2) 0%, rgba(7, 95, 56, 0.1) 38%, transparent 72%);
+  /* verde vivo (limón), no el verde oscuro: en fondo claro el verde oscuro se ve gris/negro */
+  background: radial-gradient(280px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(46, 204, 113, 0.5) 0%, rgba(46, 204, 113, 0.25) 38%, transparent 72%);
   opacity: 0;
   transition: opacity 300ms ease;
+}
+
+/* En modo oscuro el fondo es oscuro, así que el brillo necesita ser el neón claro para notarse igual */
+body.dark-mode .proyecto-bento-item .card::after {
+  background: radial-gradient(280px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(66, 255, 142, 0.28) 0%, rgba(66, 255, 142, 0.12) 38%, transparent 72%);
 }
 
 .proyecto-bento-item .card > * {
@@ -853,9 +864,23 @@ hr {
 }
 
 .proyecto-bento-item .card:hover {
-  box-shadow: var(--shadow-green-on);
   border-color: rgba(46, 204, 113, 0.55);
+}
+
+/* El brillo y el "levantamiento" van en el article (sin overflow:hidden) para que no se recorten */
+/* Usamos el verde vivo (limón) en vez del verde oscuro: sobre fondo claro un verde muy oscuro se ve gris/negro */
+.proyecto-bento-item:hover {
+  box-shadow: 0 22px 40px rgba(46, 204, 113, 0.55), 0 0 0 1px rgba(46, 204, 113, 0.6);
   transform: translateY(-6px);
+}
+
+/* Mismo peso visual que en modo claro, pero con el tono neón, un poco más suave para no saturar sobre el fondo oscuro */
+body.dark-mode .proyecto-bento-item:hover {
+  box-shadow: 0 22px 40px rgba(66, 255, 142, 0.35), 0 0 0 1px rgba(66, 255, 142, 0.4);
+}
+
+body.dark-mode .proyecto-bento-item:hover .card {
+  border-color: rgba(66, 255, 142, 0.4);
 }
 
 .proyecto-bento-item .card:hover::after {

@@ -1,11 +1,23 @@
+import { useRef } from 'react';
 import githubIcon from '../assets/icons/github.svg';
 import urlUpRightIcon from '../assets/icons/up-right-from-square-solid-full.svg';
 
 const ProyectoCard = ({ project, src, darkMode }) => {
+    const rafId = useRef(null);
+
+    // rAF evita repintar en cada evento: con backdrop-filter + overflow:hidden,
+    // actualizar el estilo demasiado seguido produce un artefacto de blur que se aclara en la esquina.
     const handlePointerMove = (event) => {
-        const bounds = event.currentTarget.getBoundingClientRect();
-        event.currentTarget.style.setProperty('--pointer-x', `${event.clientX - bounds.left}px`);
-        event.currentTarget.style.setProperty('--pointer-y', `${event.clientY - bounds.top}px`);
+        const target = event.currentTarget;
+        const clientX = event.clientX;
+        const clientY = event.clientY;
+        if (rafId.current) return;
+        rafId.current = requestAnimationFrame(() => {
+            const bounds = target.getBoundingClientRect();
+            target.style.setProperty('--pointer-x', `${clientX - bounds.left}px`);
+            target.style.setProperty('--pointer-y', `${clientY - bounds.top}px`);
+            rafId.current = null;
+        });
     };
 
     return (

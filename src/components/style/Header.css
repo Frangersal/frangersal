@@ -47,6 +47,80 @@
     transition: all 0.3s ease;
 }
 
+/* Switch de modo oscuro/claro con temática de terminal (verde/limón) */
+.theme-toggle {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    line-height: 0;
+    flex-shrink: 0;
+}
+
+.theme-toggle-track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 64px;
+    height: 32px;
+    padding: 0 9px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #052e1c, var(--verde));
+    border: 1.5px solid rgba(227, 229, 216, 0.35);
+    box-shadow: var(--shadow-green-off);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle:hover .theme-toggle-track {
+    box-shadow: var(--shadow-green-on);
+    border-color: var(--limon);
+}
+
+/* Resplandor que se desliza detrás de los iconos para resaltar la opción activa */
+.theme-toggle-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(66, 255, 142, 0.55) 0%, rgba(66, 255, 142, 0) 72%);
+    box-shadow: 0 0 10px 2px rgba(66, 255, 142, 0.35);
+    transform: translateX(0);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.35s ease;
+}
+
+.theme-toggle.is-dark .theme-toggle-thumb {
+    transform: translateX(34px);
+}
+
+/* Los iconos van por encima del resplandor y nunca se tapan entre sí */
+.theme-toggle-icon {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle-icon img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1);
+}
+
+.theme-toggle:not(.is-dark) .theme-toggle-icon-sun,
+.theme-toggle.is-dark .theme-toggle-icon-moon {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
 /* Modo oscuro para badges de Bootstrap */
 body.dark-mode .badge.bg-success-subtle,
 body.dark-mode .badge.bg-primary-subtle,

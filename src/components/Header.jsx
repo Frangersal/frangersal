@@ -5,7 +5,6 @@ import sunIcon from '../assets/icons/sun.svg'
 import './style/Header.css'
 
 const Header = ({ darkMode, setDarkMode }) => {
-    const [hover, setHover] = useState(false);
     const [activeSection, setActiveSection] = useState('perfil-section');
 
     // Actualiza el modo y guarda en localStorage
@@ -86,24 +85,22 @@ const Header = ({ darkMode, setDarkMode }) => {
                         
                         {/* Botón de modo oscuro */}
                         <button
-                            className="btn btn-outline-light btn-sm d-flex align-items-center justify-content-center header-button"
                             type="button"
+                            className={`theme-toggle${darkMode ? ' is-dark' : ''}`}
                             onClick={handleToggle}
-                            aria-label="Toggle dark mode"
-                            onMouseEnter={() => setHover(true)}
-                            onMouseLeave={() => setHover(false)}
+                            role="switch"
+                            aria-checked={darkMode}
+                            aria-label={darkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
                         >
-                            <img
-                                src={darkMode ? sunIcon : moonIcon}
-                                alt={darkMode ? "Light Mode" : "Dark Mode"}
-                                width="16"
-                                height="16"
-                                className={
-                                    darkMode && hover
-                                        ? "header-icon-dark"
-                                        : "header-icon"
-                                }
-                            />
+                            <span className="theme-toggle-track">
+                                <span className="theme-toggle-thumb" aria-hidden="true"></span>
+                                <span className="theme-toggle-icon theme-toggle-icon-sun">
+                                    <img src={sunIcon} alt="" width="12" height="12" />
+                                </span>
+                                <span className="theme-toggle-icon theme-toggle-icon-moon">
+                                    <img src={moonIcon} alt="" width="12" height="12" />
+                                </span>
+                            </span>
                         </button>
                     </div>
                     
