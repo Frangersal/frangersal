@@ -29,6 +29,7 @@ import canvas from '../assets/img/tec/canvas.webp'
 import trello from '../assets/img/tec/trello.webp'
 
 import tecnologias from '../json/tecnologias.json';
+import { useLanguage } from '../context/LanguageContext';
 
 // Mapa: nombre en JSON (sin .webp) -> import correspondiente
 //twcss,json,
@@ -40,6 +41,7 @@ const imageSrcMap = {
 
 const Tecnologias = ({ items = []}) => {
     const data = items.length ? items : tecnologias;
+    const { lang, t } = useLanguage();
 
     return (
         <>
@@ -47,9 +49,9 @@ const Tecnologias = ({ items = []}) => {
                 <div className="row seccion-f">
                     <div className="col-12">
                         <hr />
-                        <h1 className="titulo-tecnologias i-tilde">Tecnologias</h1>
+                        <h1 className={`titulo-tecnologias${lang === 'ES' ? ' i-tilde' : ''}`}>{t.tecnologias.titulo}</h1>
                         <p className="monologo-tecnologias">
-                            Estas son algunas de las tecnologías y herramientas que domino y utilizo en mis proyectos de desarrollo web. Explora el listado para conocer las bases y frameworks con los que trabajo habitualmente.
+                            {t.tecnologias.intro}
                         </p>
                         <div className="tecnologias-container">
                             {/* Iterar tecnologias.json y mostrar solo img y title */}
@@ -58,7 +60,7 @@ const Tecnologias = ({ items = []}) => {
                                 if (!src) return null; // si no hay coincidencia, no renderizar
                                 return (
                                     <div className="caja-tecnologia button-box shadow-green" key={idx}>
-                                        <img className="img-tec" src={src} alt={tec.title + " logo"} />
+                                        <img className="img-tec" src={src} alt={tec.title + " logo"} title={lang === 'EN' ? (tec.descriptionEn ?? tec.description) : tec.description} />
                                         <span>{tec.title}</span>
                                     </div>
                                 );

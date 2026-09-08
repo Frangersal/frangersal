@@ -33,6 +33,8 @@ Global recomendado
   --blanco: #e3e5d8;
   --permablanco: #e3e5d8;
   --negro: #000;
+  /* Texto sobre el fondo de la página (títulos/párrafos de sección): sí cambia con el modo, a diferencia de --blanco */
+  --texto-pagina: #e3e5d8;
   --test1: #00039e;
   --test2: #e2c418;
   --test3: #a80000;
@@ -551,7 +553,7 @@ Cara
 }
 
 .card-body {
-  background-color: #ecede7 !important;
+  background-color: rgba(236, 237, 231, 0.55) !important;
   color: #000;
 }
 
@@ -561,7 +563,7 @@ Cara
 }
 
 .card-footer {
-  background-color: #ecede7 !important;
+  background-color: rgba(236, 237, 231, 0.55) !important;
   color: #000;
   border-radius: 0px 0px 20px 20px;
 }
@@ -588,7 +590,7 @@ Cara
   width: 100px;
   height: 100px;
   transition: all 0.3s ease;
-  cursor: pointer;
+  cursor: default;
 }
 
 .img-tec {
@@ -623,6 +625,8 @@ Cara
   align-items: center;
   justify-content: center;
   border-color: var(--limon);
+  /* no son enlaces/botones reales, no sugerir que hacen algo al hacer clic */
+  cursor: default;
 }
 
 /* Imagen de la tecnología */
@@ -667,7 +671,7 @@ Cara
 .titulo-tecnologias {
   font-family: "Furore", sans-serif;
   font-size: 30px;
-  color: var(--blanco);
+  color: var(--texto-pagina);
   text-align: center;
   margin: 0px 0 20px 0;
   display: flex;
@@ -761,7 +765,7 @@ hr {
   font-size: 16px;
   font-family: "Roboto Mono", monospace, Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: var(--blanco);
+  color: var(--texto-pagina);
 }
 
 .boton-box-proyectos {
@@ -796,22 +800,241 @@ hr {
   display: flex;
   justify-content: center;
 }
+
+.proyectos-bento {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  /* sin "dense": respeta el orden real (relevance) en vez de reordenar para rellenar huecos */
+  grid-auto-flow: row;
+  column-gap: 32px;
+  row-gap: 32px;
+  width: 100%;
+}
+
+.proyecto-bento-item {
+  min-width: 0;
+  border-radius: 18px;
+  transition: box-shadow 420ms ease, transform 420ms ease;
+}
+
+.proyecto-bento-item.importancia-1 {
+  grid-column: span 9;
+}
+
+.proyecto-bento-item.importancia-2 {
+  grid-column: span 6;
+}
+
+.proyecto-bento-item.importancia-3 {
+  grid-column: span 3;
+}
+
+.proyecto-bento-item .card {
+  height: 100%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(46, 204, 113, 0.16);
+  border-radius: 18px;
+  isolation: isolate;
+  /* fuerza su propia capa de composición: evita el artefacto de blur que se acumula en la esquina al repintar seguido (backdrop-filter + overflow:hidden + border-radius) */
+  transform: translateZ(0);
+  will-change: transform;
+  transition: border-color 420ms ease;
+}
+
+.proyecto-bento-item .card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  /* verde vivo (limón), no el verde oscuro: en fondo claro el verde oscuro se ve gris/negro */
+  background: radial-gradient(280px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(46, 204, 113, 0.5) 0%, rgba(46, 204, 113, 0.25) 38%, transparent 72%);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+/* En modo oscuro el fondo es oscuro, así que el brillo necesita ser el neón claro para notarse igual */
+body.dark-mode .proyecto-bento-item .card::after {
+  background: radial-gradient(280px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(66, 255, 142, 0.28) 0%, rgba(66, 255, 142, 0.12) 38%, transparent 72%);
+}
+
+.proyecto-bento-item .card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.proyecto-bento-item .card:hover {
+  border-color: rgba(46, 204, 113, 0.55);
+}
+
+/* El brillo y el "levantamiento" van en el article (sin overflow:hidden) para que no se recorten */
+/* Usamos el verde vivo (limón) en vez del verde oscuro: sobre fondo claro un verde muy oscuro se ve gris/negro */
+.proyecto-bento-item:hover {
+  box-shadow: 0 22px 40px rgba(46, 204, 113, 0.55), 0 0 0 1px rgba(46, 204, 113, 0.6);
+  transform: translateY(-6px);
+}
+
+/* Mismo peso visual que en modo claro, pero con el tono neón, un poco más suave para no saturar sobre el fondo oscuro */
+body.dark-mode .proyecto-bento-item:hover {
+  box-shadow: 0 22px 40px rgba(66, 255, 142, 0.35), 0 0 0 1px rgba(66, 255, 142, 0.4);
+}
+
+body.dark-mode .proyecto-bento-item:hover .card {
+  border-color: rgba(66, 255, 142, 0.4);
+}
+
+.proyecto-bento-item .card:hover::after {
+  opacity: 1;
+}
+
+.proyecto-bento-item .card-header {
+  justify-content: flex-start;
+  padding: 0 14px;
+}
+
+.proyecto-bento-item .proyecto-titulo {
+  flex: 1;
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.proyecto-bento-item .proyecto-img-wrap {
+  overflow: hidden;
+}
+
+.proyecto-bento-item .proyecto-img-wrap .card-img-top {
+  width: 100%;
+  display: block;
+  transition: transform 600ms ease;
+}
+
+.proyecto-bento-item .card:hover .proyecto-img-wrap .card-img-top {
+  transform: scale(1.07);
+}
+
+.proyecto-bento-item.importancia-3 .card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
+
+.proyecto-bento-item.importancia-2 .card-img-top {
+  height: 210px;
+  object-fit: cover;
+}
+
+.proyecto-bento-item.importancia-1 .card-img-top {
+  height: 280px;
+  object-fit: cover;
+}
+
+.proyecto-bento-item .card-body {
+  padding: 1rem;
+}
+
+.proyecto-bento-item .card-text {
+  margin-bottom: 0;
+  line-height: 1.55;
+  font-size: 13.5px;
+}
+
+.proyecto-bento-item .proyecto-links {
+  padding-top: 0;
+  padding-bottom: 0.9rem;
+}
+
+.proyecto-bento-item .card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.proyecto-bento-item.importancia-3 .button-group {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.proyecto-bento-item.importancia-3 .btn-proyecto-link {
+  justify-content: center;
+  width: calc(100% - 10px);
+  margin: 4px 5px;
+  font-size: 12px !important;
+}
+
+@media (max-width: 767px) {
+  .proyectos-bento {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .proyecto-bento-item.importancia-1,
+  .proyecto-bento-item.importancia-2,
+  .proyecto-bento-item.importancia-3 {
+    grid-column: auto;
+  }
+
+  .proyecto-bento-item.importancia-1 .card-img-top,
+  .proyecto-bento-item.importancia-2 .card-img-top,
+  .proyecto-bento-item.importancia-3 .card-img-top {
+    height: 200px;
+  }
+}
+
 .btn-proyecto-link {
   border-radius: 20px !important;
   margin: 5px;
-  /* padding: 5px 5px !important; */
-  font-size: 5px !important;
+  padding: 6px 14px !important;
+  font-size: 12.5px !important;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 6px;
-  /* box-shadow: 0 2px 8px rgba(0,0,0,0.08); */
-  /* transition: background 0.2s, color 0.2s; */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-proyecto-link:hover {
+  transform: translateY(-2px);
 }
 
 .btn-proyecto-link .icon-proyecto-link {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   filter: brightness(0) invert(1);
+}
+
+.chip-tecnologia {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--verde);
+  background-color: rgba(46, 204, 113, 0.12);
+  border: 1px solid rgba(46, 204, 113, 0.35);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.card-footer-dark .chip-tecnologia {
+  color: #7cfca6;
+  background-color: rgba(66, 255, 142, 0.12);
+  border-color: rgba(66, 255, 142, 0.4);
+}
+
+.chip-tecnologia:hover {
+  background-color: var(--limon);
+  color: #06301d;
 }
 
 .scroll-top-btn {
@@ -870,4 +1093,87 @@ hr {
   width: 18px;
   height: 18px;
   filter: brightness(0) invert(1);
+}
+
+/* Tabla de certificados con el mismo lenguaje visual que las cards de proyectos:
+   transparencia, borde verde, resaltado de fila y un brillo sutil que sigue al cursor.
+   Sin sombra ni movimiento del contenedor. */
+.certificados-tabla-outer {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.certificados-tabla-inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(46, 204, 113, 0.16);
+  background-color: rgba(236, 237, 231, 0.55);
+  backdrop-filter: blur(2px);
+  isolation: isolate;
+}
+
+body.dark-mode .certificados-tabla-inner {
+  background-color: #011d1063;
+}
+
+.certificados-tabla-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(320px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(46, 204, 113, 0.08) 0%, rgba(46, 204, 113, 0.03) 38%, transparent 72%);
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+body.dark-mode .certificados-tabla-inner::after {
+  background: radial-gradient(320px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), rgba(66, 255, 142, 0.06) 0%, rgba(66, 255, 142, 0.025) 38%, transparent 72%);
+}
+
+.certificados-tabla-outer:hover .certificados-tabla-inner::after {
+  opacity: 1;
+}
+
+.certificados-tabla {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: collapse;
+  color: #000;
+}
+
+.certificados-tabla-outer.is-dark .certificados-tabla {
+  color: var(--blanco);
+}
+
+.certificados-tabla thead th {
+  background-color: var(--verde);
+  color: var(--blanco);
+  border: 0;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.certificados-tabla tbody td {
+  padding: 8px 12px;
+  font-size: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s ease;
+}
+
+.certificados-tabla-outer.is-dark .certificados-tabla tbody td {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.certificados-tabla tbody tr:hover td {
+  background-color: rgba(46, 204, 113, 0.14);
+}
+
+.certificados-tabla-outer.is-dark .certificados-tabla tbody tr:hover td {
+  background-color: rgba(66, 255, 142, 0.14);
 }

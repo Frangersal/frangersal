@@ -2,11 +2,30 @@ import React, { useState, useEffect } from 'react'
 import logo from '../assets/img/FGSM-Primary.webp'
 import moonIcon from '../assets/icons/moon.svg'
 import sunIcon from '../assets/icons/sun.svg'
+import { MX, US } from 'country-flag-icons/react/3x2'
+import { useLanguage } from '../context/LanguageContext'
 import './style/Header.css'
 
 const Header = ({ darkMode, setDarkMode }) => {
-    const [hover, setHover] = useState(false);
     const [activeSection, setActiveSection] = useState('perfil-section');
+    const { lang, setLang, t } = useLanguage();
+    const [showLangModal, setShowLangModal] = useState(false);
+
+    // Solo visual por ahora: elige el idioma desde el modal, sin lógica de traducción
+    const handleSelectLang = (value) => {
+        setLang(value);
+        setShowLangModal(false);
+    };
+
+    // Cerrar el modal con Escape
+    useEffect(() => {
+        if (!showLangModal) return;
+        const onKeyDown = (e) => {
+            if (e.key === 'Escape') setShowLangModal(false);
+        };
+        window.addEventListener('keydown', onKeyDown);
+        return () => window.removeEventListener('keydown', onKeyDown);
+    }, [showLangModal]);
 
     // Actualiza el modo y guarda en localStorage
     const handleToggle = () => {
@@ -77,33 +96,42 @@ const Header = ({ darkMode, setDarkMode }) => {
                     
                     {/* Botones de idioma y modo oscuro */}
                     <div className="d-flex align-items-center gap-2 order-lg-last">
-                        {/* Botón de idioma 
-                        
-                        <button className="btn btn-outline-light btn-sm d-flex align-items-center justify-content-center gap-1 header-button" type="button">
-                            <img src={globeIcon} alt="Language" width="16" height="16" className="header-icon" />
-                            <span className="language-text">ES</span>
-                        </button>*/}
-                        
+                        {/* Botón de idioma (solo visual, sin lógica de traducción todavía) */}
+                        <button
+                            type="button"
+                            className="language-toggle"
+                            onClick={() => setShowLangModal(true)}
+                            aria-haspopup="dialog"
+                            aria-label={t.header.elegirIdioma}
+                            style={{ color: 'var(--blanco)' }}
+                        >
+                            {/* Bandera real (country-flag-icons); el emoji de bandera no renderiza a color en Linux */}
+                            {lang === 'ES' ? (
+                                <MX className="language-flag" title="" aria-hidden="true" />
+                            ) : (
+                                <US className="language-flag" title="" aria-hidden="true" />
+                            )}
+                            <span className="language-text" style={{ color: 'var(--blanco)' }}>{lang}</span>
+                        </button>
+
                         {/* Botón de modo oscuro */}
                         <button
-                            className="btn btn-outline-light btn-sm d-flex align-items-center justify-content-center header-button"
                             type="button"
+                            className={`theme-toggle${darkMode ? ' is-dark' : ''}`}
                             onClick={handleToggle}
-                            aria-label="Toggle dark mode"
-                            onMouseEnter={() => setHover(true)}
-                            onMouseLeave={() => setHover(false)}
+                            role="switch"
+                            aria-checked={darkMode}
+                            aria-label={darkMode ? t.header.cambiarModoClaro : t.header.cambiarModoOscuro}
                         >
-                            <img
-                                src={darkMode ? sunIcon : moonIcon}
-                                alt={darkMode ? "Light Mode" : "Dark Mode"}
-                                width="16"
-                                height="16"
-                                className={
-                                    darkMode && hover
-                                        ? "header-icon-dark"
-                                        : "header-icon"
-                                }
-                            />
+                            <span className="theme-toggle-track">
+                                <span className="theme-toggle-thumb" aria-hidden="true"></span>
+                                <span className="theme-toggle-icon theme-toggle-icon-sun">
+                                    <img src={sunIcon} alt="" width="12" height="12" />
+                                </span>
+                                <span className="theme-toggle-icon theme-toggle-icon-moon">
+                                    <img src={moonIcon} alt="" width="12" height="12" />
+                                </span>
+                            </span>
                         </button>
                     </div>
                     
@@ -119,40 +147,83 @@ const Header = ({ darkMode, setDarkMode }) => {
                                     aria-current="page"
                                     href="#perfil-section"
                                     onClick={(e)=>handleNavClick(e,'perfil-section')}
-                                >Perfil</a>
+                                >{t.nav.perfil}</a>
                             </li>
                             <li className="nav-item">
                                 <a
                                     className={`nav-link fs-5 fw-bold${activeSection==='tecnologias-section' ? ' active':''}`}
                                     href="#tecnologias-section"
                                     onClick={(e)=>handleNavClick(e,'tecnologias-section')}
-                                >Tecnologías</a>
+                                >{t.nav.tecnologias}</a>
                             </li>
                             <li className="nav-item">
                                 <a
                                     className={`nav-link fs-5 fw-bold${activeSection==='proyectos-section' ? ' active':''}`}
                                     href="#proyectos-section"
                                     onClick={(e)=>handleNavClick(e,'proyectos-section')}
-                                >Proyectos</a>
+                                >{t.nav.proyectos}</a>
                             </li>
                             <li className="nav-item">
                                 <a
                                     className={`nav-link fs-5 fw-bold${activeSection==='certificados-section' ? ' active':''}`}
                                     href="#certificados-section"
                                     onClick={(e)=>handleNavClick(e,'certificados-section')}
-                                >Certificados</a>
+                                >{t.nav.certificados}</a>
                             </li>
                             <li className="nav-item">
                                 <a
                                     className={`nav-link fs-5 fw-bold${activeSection==='descargas-section' ? ' active':''}`}
                                     href="#descargas-section"
                                     onClick={(e)=>handleNavClick(e,'descargas-section')}
-                                >Descargas</a>
+                                >{t.nav.descargas}</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </nav> 
+            </nav>
+
+            {/* Modal de selección de idioma (solo visual, sin lógica de traducción todavía) */}
+            {showLangModal && (
+                <div
+                    className="lang-modal-backdrop"
+                    onClick={() => setShowLangModal(false)}
+                >
+                    <div
+                        className="lang-modal"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="Selecciona un idioma"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            type="button"
+                            className="lang-modal-close"
+                            onClick={() => setShowLangModal(false)}
+                            aria-label="Cerrar"
+                        >
+                            ×
+                        </button>
+                        <div className="lang-modal-options">
+                            <button
+                                type="button"
+                                className={`lang-modal-option${lang === 'ES' ? ' is-active' : ''}`}
+                                onClick={() => handleSelectLang('ES')}
+                            >
+                                <MX className="lang-modal-flag" title="" aria-hidden="true" />
+                                <span>Español</span>
+                            </button>
+                            <button
+                                type="button"
+                                className={`lang-modal-option${lang === 'EN' ? ' is-active' : ''}`}
+                                onClick={() => handleSelectLang('EN')}
+                            >
+                                <US className="lang-modal-flag" title="" aria-hidden="true" />
+                                <span>English</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </>
     )
 }
