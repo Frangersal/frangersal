@@ -722,7 +722,7 @@ Cara
   position: absolute;
   width: 10px;
   height: 4px;
-  background-color: var(--blanco);
+  background-color: var(--texto-pagina);
   top: 2px;
   left: 57.6%;
   transform: translateX(-50%) rotate(-10deg);
