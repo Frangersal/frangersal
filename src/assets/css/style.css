@@ -590,7 +590,7 @@ Cara
   width: 100px;
   height: 100px;
   transition: all 0.3s ease;
-  cursor: pointer;
+  cursor: default;
 }
 
 .img-tec {
@@ -625,6 +625,8 @@ Cara
   align-items: center;
   justify-content: center;
   border-color: var(--limon);
+  /* no son enlaces/botones reales, no sugerir que hacen algo al hacer clic */
+  cursor: default;
 }
 
 /* Imagen de la tecnología */
