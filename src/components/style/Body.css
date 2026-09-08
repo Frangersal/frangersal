@@ -4,13 +4,8 @@ body{
 /* Estilos para el componente Body */
 .body-container-dark {
     margin-top: 40px;
-    background-color: #171717; /* nuevo: fondo negro mientras carga la imagen */
-    background-image: url('../../assets/img/code-dark.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #171717; /* fondo mientras carga la imagen (ahora es un <img>, no background-image) */
     width: 100%;
-    background-attachment: fixed;
     padding: 2rem 0;
     /* Espaciado vertical */
     padding-top: 80px;
@@ -21,19 +16,28 @@ body{
 
 .body-container {
     margin-top: 40px;
-    background-color: #dadbd2; /* nuevo: fondo blanco por defecto */
-    background-image: url('../../assets/img/code.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #dadbd2; /* fondo mientras carga la imagen (ahora es un <img>, no background-image) */
     width: 100%;
-    background-attachment: fixed;
     padding: 2rem 0;
     /* Espaciado vertical */
     padding-top: 80px;
     /* Compensar altura del navbar fijo */
     /* Removido min-height: 100vh para que se ajuste al contenido */
     transition: background-color 0.25s ease;
+}
+
+/* Imagen de fondo como <img> real (en vez de background-image) para que el LCP
+   sea descubrible de inmediato y admita fetchpriority="high". position:fixed
+   reproduce el efecto de background-attachment:fixed que tenía antes. */
+.body-bg-img {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .puesto-furore {
