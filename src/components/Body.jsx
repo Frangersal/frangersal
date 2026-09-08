@@ -14,11 +14,13 @@ import Header from './Header'
 import Tecnologias from './Tecnologias'
 import Proyectos from './Proyectos'
 import Certificados from './Certificados'
+import { useLanguage } from '../context/LanguageContext'
 
 import '../assets/css/style.css'
 import './style/Body.css'
 
 const Body = () => {
+    const { t } = useLanguage();
     // Inicializa darkMode desde localStorage, si existe
     const getInitialMode = () => {
         const stored = localStorage.getItem('fgsm-dark-mode');
@@ -73,7 +75,7 @@ const Body = () => {
                 <div className="container-limitado" id="perfil-section">
                     <div className="card shadow-green-off text-bg-dark  " >
                         <div className="card-header ">
-                            <h1 className="window-title">Perfil y Contacto</h1>
+                            <h1 className="window-title">{t.perfil.titulo}</h1>
                         </div>
                         <div className={darkMode ? "card-body card-body-dark" : "card-body"}>
                             <div className="row seccion-f">
@@ -84,7 +86,7 @@ const Body = () => {
                                                 <div className="cara animar-pop">
                                                     <img className="img-perfil shadow-green-off" src={foto} alt="Mi Foto" />
                                                     <h1 className="nombre">Francisco Gerardo Salinas Mendoza</h1>
-                                                    <h2 className="puesto">Frontend Web <br /> Developer Jr.</h2>
+                                                    <h2 className="puesto">{t.perfil.puestoLinea1} <br /> {t.perfil.puestoLinea2}</h2>
                                                 </div>
                                             </div>
                                             <div className="col-xs-12 col-sm-12 col-md-7  col-lg-6 seccion-f animar-sec">
@@ -99,13 +101,7 @@ const Body = () => {
                                                         <span className="letra" onMouseEnter={handleLetterEnter} onMouseLeave={handleLetterLeave}>&gt;</span>
                                                     </div>
                                                     <p className="perfil-pro">
-                                                        Soy un Web
-                                                        Developer Jr. con habilidades en Laravel, PHP, MySQL,
-                                                        React.Js, Bootsrap y Java. Me apasiona el desarrollo
-                                                        web sobre todo la parte del Frontend, estoy siempre
-                                                        buscando mejorar y estar actualizado en las últimas
-                                                        tecnologías. Estoy emocionado por enfrentar nuevos
-                                                        desafíos y ser parte de su equipo.
+                                                        {t.perfil.descripcion}
                                                     </p>
                                                     <div className="descripcion_boton">
                                                         <a href="https://wa.me/525637462715" target="_blank" rel="noopener noreferrer" className="button-box button-box-contact shadow-green center">
@@ -146,9 +142,9 @@ const Body = () => {
                     <div className="row seccion-f">
                         <div className="col-12">
                             <hr />
-                            <h1 className="titulo-tecnologias">Descargas</h1>
+                            <h1 className="titulo-tecnologias">{t.descargas.titulo}</h1>
                             <p className="monologo-tecnologias">
-                                Puedes descargar mi currículum vitae en formato PDF para conocer más sobre mi experiencia, habilidades y formación profesional. Haz clic en el botón para obtener una copia actualizada de mi CV.
+                                {t.descargas.intro}
                             </p>
                             <div className="tecnologias-container">
                                 <a
@@ -158,7 +154,7 @@ const Body = () => {
                                     style={{ textDecoration: 'none', color: 'inherit' }}
                                 >
                                     <span className={darkMode ? 'text-descargar-dark' : 'text-descargar'}>
-                                        Descargar CV de <br />Francisco G. Salinas 
+                                        {t.descargas.botonLinea1} <br />{t.descargas.botonLinea2}
                                     </span>
                                 </a>
                             </div>
@@ -171,7 +167,7 @@ const Body = () => {
                 <button
                     className="scroll-top-btn shadow-green"
                     onClick={scrollToTop}
-                    aria-label="Ir arriba"
+                    aria-label={t.header.irArriba}
                 >
                     <div className='letter-arrow'>
 

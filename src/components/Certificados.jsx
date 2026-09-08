@@ -2,9 +2,11 @@ import React from 'react';
 import certificateIcon from '../assets/icons/certificate-solid-full.svg'
 import './style/Body.css'
 import certificados from '../json/certificados.json';
+import { useLanguage } from '../context/LanguageContext';
 
 const Certificados = ({ items = [], darkMode }) => {
   const data = items.length ? items : certificados;
+  const { lang, t } = useLanguage();
   const tableClass = `table table-hover shadow-green-off${darkMode ? ' table-dark' : ''}`;
 
   // Mapa de PDFs dentro de src/assets/pdf/** -> URL finales servibles por Vite
@@ -20,18 +22,18 @@ const Certificados = ({ items = [], darkMode }) => {
       <div className="row seccion-f">
         <div className="col-12">
           <hr />
-          <h1 className="titulo-tecnologias">Certificados</h1>
+          <h1 className="titulo-tecnologias">{t.certificados.titulo}</h1>
           <p className="monologo-tecnologias">
-            Aquí puedes consultar una lista de mis certificados obtenidos en distintas plataformas y cursos. Estos avalan mis conocimientos y habilidades en desarrollo web, programación y tecnologías relacionadas.
+            {t.certificados.intro}
           </p>
           <div className="tecnologias-container">
             <table className={tableClass}>
               <thead className="table-dark">
                 <tr>
-                  <th className='table-th '>Certificado</th>
-                  <th className='table-th '>Institución</th>
-                  <th className='table-th '>Año</th>
-                  <th className='table-th '>Enlace</th>
+                  <th className='table-th '>{t.certificados.colCertificado}</th>
+                  <th className='table-th '>{t.certificados.colInstitucion}</th>
+                  <th className='table-th '>{t.certificados.colAnio}</th>
+                  <th className='table-th '>{t.certificados.colEnlace}</th>
                 </tr>
               </thead>
               <tbody>
@@ -39,7 +41,7 @@ const Certificados = ({ items = [], darkMode }) => {
                   const hasPdf = typeof c.pdf === 'string' && c.pdf.trim() !== '';
                   return (
                     <tr key={idx}>
-                      <td>{c.title}</td>
+                      <td>{lang === 'EN' ? (c.titleEn ?? c.title) : c.title}</td>
                       <td>{c.org}</td>
                       <td>{c.year}</td>
                       <td className='table-td'>
@@ -51,7 +53,7 @@ const Certificados = ({ items = [], darkMode }) => {
                               className="btn btn-success btn-sm btn-certificado-link"
                             >
                               <img src={certificateIcon} alt="" className="icon-certificado-link" />
-                              Ver
+                              {t.certificados.ver}
                             </a>
                           )}
                         </div>

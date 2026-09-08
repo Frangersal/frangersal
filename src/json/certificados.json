@@ -1,6 +1,7 @@
 [
     {
         "title": "Desarrollador Java Full Stack",
+        "titleEn": "Full Stack Java Developer",
         "org": "Generation: México",
         "year": 2023,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -8,6 +9,7 @@
     },
     {
         "title": "Egresado Ing. Sistemas Computacionales",
+        "titleEn": "Computer Systems Engineering Graduate",
         "org": "TecNM Campus Acapulco",
         "year": 2019,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -15,6 +17,7 @@
     },
     {
         "title": "Backend con Express.Js",
+        "titleEn": "Backend with Express.js",
         "org": "Platzi",
         "year": 2025,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -22,12 +25,14 @@
     },
     {
         "title": "Frameworks y Librerías de JavaScript",
+        "titleEn": "JavaScript Frameworks and Libraries",
         "org": "Platzi",
         "year": 2025,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
         "pdf": "pdf/platzi/17-frameworks-js.pdf"
     },{
         "title": "Asincronismo con JavaScript",
+        "titleEn": "Asynchronous JavaScript",
         "org": "Platzi",
         "year": 2025,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -35,6 +40,7 @@
     },
     {
         "title": "JavaScript: Manipulación del DOM",
+        "titleEn": "JavaScript: DOM Manipulation",
         "org": "Platzi",
         "year": 2025,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -42,6 +48,7 @@
     },
     {
         "title": "Closures y Scope en JavaScript",
+        "titleEn": "Closures and Scope in JavaScript",
         "org": "Platzi",
         "year": 2025,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -49,6 +56,7 @@
     },
     {
         "title": "Práctico de Frontend Developer",
+        "titleEn": "Frontend Developer Practical Course",
         "org": "Platzi",
         "year": 2025,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -56,6 +64,7 @@
     },
     {
         "title": "Frontend Developer",
+        "titleEn": "Frontend Developer",
         "org": "Platzi",
         "year": 2025,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -63,6 +72,7 @@
     },
     {
         "title": "JavaScript esencial",
+        "titleEn": "Essential JavaScript",
         "org": "Linkedin",
         "year": 2023,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -70,6 +80,7 @@
     },
     {
         "title": "Figma esencial",
+        "titleEn": "Essential Figma",
         "org": "Linkedin",
         "year": 2023,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -77,6 +88,7 @@
     },
     {
         "title": "GitHub para programadores",
+        "titleEn": "GitHub for Developers",
         "org": "Linkedin",
         "year": 2023,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -84,6 +96,7 @@
     },
     {
         "title": "Integración HTML y CSS esencial",
+        "titleEn": "Essential HTML and CSS Integration",
         "org": "Linkedin",
         "year": 2023,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -91,6 +104,7 @@
     },
     {
         "title": "MySQL esencial",
+        "titleEn": "Essential MySQL",
         "org": "Linkedin",
         "year": 2023,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -98,6 +112,7 @@
     },
     {
         "title": "SCRUM con un café",
+        "titleEn": "SCRUM Over Coffee",
         "org": "Linkedin",
         "year": 2023,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -105,6 +120,7 @@
     },
     {
         "title": "Consumo de API Rest con JavaScript",
+        "titleEn": "Consuming REST APIs with JavaScript",
         "org": "Platzi",
         "year": 2023,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -112,6 +128,7 @@
     },
     {
         "title": "Integración de PHP con HTML",
+        "titleEn": "PHP and HTML Integration",
         "org": "Platzi",
         "year": 2022,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -119,6 +136,7 @@
     },
     {
         "title": "Práctico de JavaScript",
+        "titleEn": "JavaScript Practical Course",
         "org": "Platzi",
         "year": 2022,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -126,6 +144,7 @@
     },
     {
         "title": "Bootstrap",
+        "titleEn": "Bootstrap",
         "org": "Platzi",
         "year": 2022,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -133,6 +152,7 @@
     },
     {
         "title": "Básico de PHP: Instalación, Fundamentos y Operadores",
+        "titleEn": "PHP Basics: Installation, Fundamentals and Operators",
         "org": "Platzi",
         "year": 2022,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -140,6 +160,7 @@
     },
     {
         "title": "Programación Orientada a Objetos en PHP",
+        "titleEn": "Object-Oriented Programming in PHP",
         "org": "Platzi",
         "year": 2022,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -147,6 +168,7 @@
     },
     {
         "title": "Introducción a los Negocios Online",
+        "titleEn": "Introduction to Online Business",
         "org": "Platzi",
         "year": 2022,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -154,6 +176,7 @@
     },
     {
         "title": "Frontend Developer",
+        "titleEn": "Frontend Developer",
         "org": "Platzi",
         "year": 2021,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -161,6 +184,7 @@
     },
     {
         "title": "Introducción a la Web: Historia y Funcionamiento de Internet",
+        "titleEn": "Intro to the Web: History and How the Internet Works",
         "org": "Platzi",
         "year": 2021,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -168,6 +192,7 @@
     },
     {
         "title": "Definitivo de HTML y CSS",
+        "titleEn": "The Complete HTML and CSS Course",
         "org": "Platzi",
         "year": 2021,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",
@@ -175,6 +200,7 @@
     },
     {
         "title": "Prework: Configuración de Entorno de Desarrollo en Windows",
+        "titleEn": "Prework: Setting Up a Dev Environment on Windows",
         "org": "Platzi",
         "year": 2021,
         "url": "https://www.Platzi.org/account/accomplishments/certificate/123456",

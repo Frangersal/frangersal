@@ -3,11 +3,12 @@ import logo from '../assets/img/FGSM-Primary.webp'
 import moonIcon from '../assets/icons/moon.svg'
 import sunIcon from '../assets/icons/sun.svg'
 import { MX, US } from 'country-flag-icons/react/3x2'
+import { useLanguage } from '../context/LanguageContext'
 import './style/Header.css'
 
 const Header = ({ darkMode, setDarkMode }) => {
     const [activeSection, setActiveSection] = useState('perfil-section');
-    const [lang, setLang] = useState('ES');
+    const { lang, setLang, t } = useLanguage();
     const [showLangModal, setShowLangModal] = useState(false);
 
     // Solo visual por ahora: elige el idioma desde el modal, sin lógica de traducción
@@ -101,7 +102,7 @@ const Header = ({ darkMode, setDarkMode }) => {
                             className="language-toggle"
                             onClick={() => setShowLangModal(true)}
                             aria-haspopup="dialog"
-                            aria-label="Elegir idioma"
+                            aria-label={t.header.elegirIdioma}
                             style={{ color: 'var(--blanco)' }}
                         >
                             {/* Bandera real (country-flag-icons); el emoji de bandera no renderiza a color en Linux */}
@@ -120,7 +121,7 @@ const Header = ({ darkMode, setDarkMode }) => {
                             onClick={handleToggle}
                             role="switch"
                             aria-checked={darkMode}
-                            aria-label={darkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+                            aria-label={darkMode ? t.header.cambiarModoClaro : t.header.cambiarModoOscuro}
                         >
                             <span className="theme-toggle-track">
                                 <span className="theme-toggle-thumb" aria-hidden="true"></span>
@@ -146,35 +147,35 @@ const Header = ({ darkMode, setDarkMode }) => {
                                     aria-current="page"
                                     href="#perfil-section"
                                     onClick={(e)=>handleNavClick(e,'perfil-section')}
-                                >Perfil</a>
+                                >{t.nav.perfil}</a>
                             </li>
                             <li className="nav-item">
                                 <a
                                     className={`nav-link fs-5 fw-bold${activeSection==='tecnologias-section' ? ' active':''}`}
                                     href="#tecnologias-section"
                                     onClick={(e)=>handleNavClick(e,'tecnologias-section')}
-                                >Tecnologías</a>
+                                >{t.nav.tecnologias}</a>
                             </li>
                             <li className="nav-item">
                                 <a
                                     className={`nav-link fs-5 fw-bold${activeSection==='proyectos-section' ? ' active':''}`}
                                     href="#proyectos-section"
                                     onClick={(e)=>handleNavClick(e,'proyectos-section')}
-                                >Proyectos</a>
+                                >{t.nav.proyectos}</a>
                             </li>
                             <li className="nav-item">
                                 <a
                                     className={`nav-link fs-5 fw-bold${activeSection==='certificados-section' ? ' active':''}`}
                                     href="#certificados-section"
                                     onClick={(e)=>handleNavClick(e,'certificados-section')}
-                                >Certificados</a>
+                                >{t.nav.certificados}</a>
                             </li>
                             <li className="nav-item">
                                 <a
                                     className={`nav-link fs-5 fw-bold${activeSection==='descargas-section' ? ' active':''}`}
                                     href="#descargas-section"
                                     onClick={(e)=>handleNavClick(e,'descargas-section')}
-                                >Descargas</a>
+                                >{t.nav.descargas}</a>
                             </li>
                         </ul>
                     </div>

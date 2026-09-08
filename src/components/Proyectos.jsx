@@ -21,6 +21,7 @@ import mycalculator from '../assets/img/proyectos/mycalculator.webp'
 
 import './style/Body.css'
 import projects from '../json/projects.json';
+import { useLanguage } from '../context/LanguageContext';
 
 // Mapa: nombre en JSON (sin .webp) -> import correspondiente
 const imageSrcMap = {
@@ -48,15 +49,16 @@ const Proyectos = ({ items = [], darkMode }) => {
   const data = (items.length ? items : projects)
     .slice()
     .sort((a, b) => (a.relevance ?? 999) - (b.relevance ?? 999));
+  const { lang, t } = useLanguage();
 
   return (
     <div className="container-limitado">
       <div className="row seccion-f">
         <div className="col-12">
           <hr />
-          <h2 className="titulo-tecnologias">Proyectos</h2>
+          <h2 className="titulo-tecnologias">{t.proyectos.titulo}</h2>
           <p className="monologo-tecnologias">
-            A continuación puedes ver algunos de los proyectos en los que he trabajado, donde aplico mis conocimientos en desarrollo web, frameworks modernos y buenas prácticas. Cada proyecto incluye una breve descripción, tecnologías utilizadas y enlaces para ver el demo o el código fuente.
+            {t.proyectos.intro}
           </p>
           <div className="tecnologias-container">
             <div className="proyectos-bento">
@@ -64,7 +66,7 @@ const Proyectos = ({ items = [], darkMode }) => {
                 const src = imageSrcMap[project.img];
                 if (!src) return null;
                 return (
-                  <ProyectoCard key={idx} project={project} src={src} darkMode={darkMode} />
+                  <ProyectoCard key={idx} project={project} src={src} darkMode={darkMode} lang={lang} t={t.proyectos} />
                 );
               })}
             </div>
