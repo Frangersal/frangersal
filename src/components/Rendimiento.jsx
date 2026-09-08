@@ -24,7 +24,7 @@ const Rendimiento = () => {
 
     return (
         <div className={`rendimiento-container ${isAtBottom ? 'at-bottom' : ''}`}>
-            <a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Ffrangersal.netlify.app%2F&tab=desktop" target="_blank" rel="noopener noreferrer" className="btn-rendimiento shadow-green">
+            <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Ffrangersal.netlify.app%2F&form_factor=desktop" target="_blank" rel="noopener noreferrer" className="btn-rendimiento shadow-green">
                 <img src={pageSpeedIcon} alt="PageSpeed Insights" height="30" className="rounded" />
             </a>
             
