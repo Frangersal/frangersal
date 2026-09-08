@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react'
 
 import foto from '../assets/img/foto/Perfil Frangersal 2026.webp'
+import codeBg from '../assets/img/code.webp'
+import codeBgDark from '../assets/img/code-dark.webp'
 
 import whatsappIcon from '../assets/icons/square-whatsapp.svg'
 import linkedinIcon from '../assets/icons/linkedin.svg'
@@ -72,6 +74,15 @@ const Body = () => {
         <>
             <Header darkMode={darkMode} setDarkMode={setDarkMode} />
             <main className={darkMode ? "body-container-dark" : "body-container"}>
+                <img
+                    src={darkMode ? codeBgDark : codeBg}
+                    alt=""
+                    aria-hidden="true"
+                    className="body-bg-img"
+                    fetchPriority="high"
+                    loading="eager"
+                    decoding="async"
+                />
                 <div className="container-limitado" id="perfil-section">
                     <div className="card shadow-green-off text-bg-dark  " >
                         <div className="card-header ">
@@ -84,7 +95,7 @@ const Body = () => {
                                         <div className="row">
                                             <div className="col-xs-12 col-sm-12 col-md-5 col-lg-6 seccion-f animar-sec">
                                                 <div className="cara animar-pop">
-                                                    <img className="img-perfil shadow-green-off" src={foto} alt="Mi Foto" />
+                                                    <img className="img-perfil shadow-green-off" src={foto} alt="Mi Foto" fetchPriority="high" loading="eager" decoding="async" />
                                                     <h1 className="nombre">Francisco Gerardo Salinas Mendoza</h1>
                                                     <h2 className="puesto">{t.perfil.puestoLinea1} <br /> {t.perfil.puestoLinea2}</h2>
                                                 </div>

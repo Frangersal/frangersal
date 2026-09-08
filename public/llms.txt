@@ -1,0 +1,20 @@
+# Frangersal — Portafolio de Francisco Gerardo Salinas Mendoza
+
+> Portafolio profesional de Francisco Gerardo Salinas Mendoza (Frangersal), Frontend Web Developer Jr. Presenta perfil, tecnologías, proyectos, certificados y descargas, disponible en español e inglés.
+
+## Páginas
+
+- [Inicio / Perfil y Contacto](https://frangersal.netlify.app/#perfil-section): Presentación profesional, habilidades principales y medios de contacto (WhatsApp, LinkedIn, GitHub, correo).
+- [Tecnologías](https://frangersal.netlify.app/#tecnologias-section): Lenguajes, frameworks y herramientas que domina (HTML, CSS, JavaScript, Java, PHP, Spring Boot, Laravel, React, Vite, MySQL, Git, GitHub, Bootstrap, Tailwind, Apache, Postman, NPM, Node.js, Chart.js, Linux/WSL, JSON, Figma, Blender, Photopea, Canvas, Trello).
+- [Proyectos](https://frangersal.netlify.app/#proyectos-section): Listado de proyectos de desarrollo web con descripción, tecnologías utilizadas, demo en vivo y repositorio en GitHub.
+- [Certificados](https://frangersal.netlify.app/#certificados-section): Certificados obtenidos en Platzi, LinkedIn Learning y su institución académica (TecNM Campus Acapulco).
+- [Descargas](https://frangersal.netlify.app/#descargas-section): Currículum vitae en formato PDF para descarga directa.
+
+## Repositorio
+
+- [Código fuente en GitHub](https://github.com/Frangersal/frangersal): Repositorio del propio portafolio, construido con React y Vite.
+
+## Notas
+
+- El sitio permite alternar entre modo claro/oscuro y entre español e inglés desde el encabezado.
+- El contenido de proyectos, tecnologías y certificados se genera dinámicamente a partir de datos estructurados (JSON) dentro del repositorio.
