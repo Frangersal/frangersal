@@ -29,13 +29,16 @@ const Body = () => {
     useEffect(() => {
         // Guarda la preferencia en localStorage
         localStorage.setItem('fgsm-dark-mode', darkMode);
-        // Cambia el valor de --blanco según el modo
+        // --blanco es constante (no depende del modo): navbar, botones y cards usan
+        // fondo verde oscuro siempre, así que su texto debe seguir siendo claro en ambos modos.
+        // --texto-pagina sí cambia: es para títulos/párrafos que están directamente sobre
+        // el fondo de la página (que sí cambia de imagen/color entre modo claro y oscuro).
         const root = document.documentElement;
         if (darkMode) {
-            root.style.setProperty('--blanco', '#ECEDE7');
+            root.style.setProperty('--texto-pagina', '#ECEDE7');
             document.body.classList.add('dark-mode');
         } else {
-            root.style.setProperty('--blanco', '#000');
+            root.style.setProperty('--texto-pagina', '#000');
             document.body.classList.remove('dark-mode');
         }
     }, [darkMode]);
